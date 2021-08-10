@@ -11356,3 +11356,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 .portfolio-image {
     width: 100%;
 }
+
+.contact:hover, .contact:hover * {
+    color: #ffc800;
+}
