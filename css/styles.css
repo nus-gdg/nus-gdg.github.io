@@ -11982,3 +11982,8 @@ section#contact form#contactForm :-ms-input-placeholder {
     box-shadow: 0 2px 2px rgba(0,0,0,.2);
   }
 }
+
+
+.tutImages {
+  object-fit: cover;
+}
