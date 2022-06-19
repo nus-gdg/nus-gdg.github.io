@@ -10,7 +10,7 @@
     <meta name="author" content="" />
     <title>NUSGDG</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/img/logos/nusgdg.png" />
     <!-- Font Awesome icons (free version)-->
     <script
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
@@ -35,7 +35,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="#page-top"
-          ><img src="assets/img/logos/nusgdg_white_text_transparent_bg.png" alt="..."
+          ><img
+            src="assets/img/logos/nusgdg_white_text_transparent_bg.png"
+            alt="..."
         /></a>
         <button
           class="navbar-toggler"
@@ -91,26 +93,344 @@
       <div class="container">
         <div class="text-center">
           <h2 class="section-heading text-uppercase">What do we do?</h2>
-          <h3 class="section-subheading text-muted">The NUS Games Development Group is a Student Interest Group at the National University at Singapore, dedicated to getting students involved in making games. <br> We invite any students interested in game development to join us!</h3>
+          <h3 class="section-subheading text-muted">
+            The NUS Games Development Group is a Student Interest Group at the
+            National University at Singapore, dedicated to getting students
+            involved in making games. <br />
+            We invite any students interested in game development to join us!
+          </h3>
         </div>
         <div class="row text-center">
-          <div class="col-md-3">
-            <img class="rounded-circle about-image" src="assets/img/about/Cropped_Professional_Talks.png"> 
-            <h4 class="my-3">Professional Talks</h4>
+          <div
+            class="col-md-3 sectionThumb"
+            id="GameDevelopmentTutorialsThumb"
+            onclick="openDiv('GameDevelopmentTutorialsInfo')"
+          >
+            <img
+              class="rounded-circle about-image thumbImage wiggle-animation"
+              src="assets/img/about/Cropped_Game_Development_Tutorial.png"
+            />
+            <h4 class="my-3 sectionThumbTitle">Game Development Tutorials</h4>
           </div>
-          <div class="col-md-3">
-            <img class="rounded-circle about-image" src="assets/img/about/Cropped_Game_Jams.png">
-            <h4 class="my-3">Game Jams</h4>
+          <div
+            class="col-md-3 sectionThumb"
+            id="CollaborationsThumb"
+            onclick="openDiv('CollaborationsInfo')"
+          >
+            <img
+              class="rounded-circle about-image thumbImage wiggle-animation"
+              src="assets/img/about/Cropped_Collaborations.png"
+            />
+            <h4 class="my-3 sectionThumbTitle">Collaborations</h4>
           </div>
-          <div class="col-md-3">
-            <img class="rounded-circle about-image" src="assets/img/about/Cropped_Game_Development_Tutorial.png">
-            <h4 class="my-3">Game Development Tutorials</h4>
+          <div
+            class="col-md-3 sectionThumb"
+            id="GameJamsThumb"
+            onclick="openDiv('GameJamsInfo')"
+          >
+            <img
+              class="rounded-circle about-image thumbImage wiggle-animation"
+              src="assets/img/about/Cropped_Game_Jams.png"
+            />
+            <h4 class="my-3 sectionThumbTitle">Game Jams</h4>
           </div>
-          <div class="col-md-3">
-            <img class="rounded-circle about-image" src="assets/img/about/Cropped_Collaborations.png">
-            <h4 class="my-3">Collaborations</h4>
+          <div
+            class="col-md-3 sectionThumb"
+            id="ProfessionalTalksThumb"
+            onclick="openDiv('ProfessionalTalksInfo')"
+          >
+            <img
+              class="rounded-circle about-image thumbImage wiggle-animation"
+              src="assets/img/about/Cropped_Professional_Talks.png"
+            />
+            <h4 class="my-3 sectionThumbTitle">Professional Talks</h4>
           </div>
         </div>
+      </div>
+
+      <br />
+
+      <div class="container text-center" id="GameDevelopmentTutorialsInfo">
+        <br />
+        <h2>Game Development Tutorials</h2>
+        <img
+          class="displaySectionImage about-image"
+          src="assets/img/about/Cropped_Game_Development_Tutorial.png"
+        />
+        <p>
+          We host game development tutorials for students to learn how to make
+          games. Some of our tutorial sessions have been recorded and uploaded
+          to YouTube. Come join us Thursdays 7.30pm on
+          <a href="https://discord.gg/DrW3VeM">discord</a> for a wide variety of
+          game development tutorials catered to the budding game developer.
+        </p>
+
+        <div class="container row">
+          <div class="col-md-6">
+            <div
+              class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+            >
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary"
+                  >Unity Basics</strong
+                >
+                <h3 class="mb-0">Platformer Physics</h3>
+                <!-- <div class="mb-1 text-muted">Nov 12</div> -->
+                <p class="card-text mb-auto">
+                  Learn how to manipulate physics in Unity to build a simple
+                  platformer game.
+                </p>
+                <a
+                  href="https://www.youtube.com/watch?v=pjYoBvSRLZs&list=PL4Yjq9yLt-GiLsO0xji0vxwcm9b0PLq4a&index=6"
+                  class="stretched-link"
+                  >Watch Video</a
+                >
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img
+                  class="tutImages"
+                  width="200"
+                  height="250"
+                  src="assets/img/GameDevTuts/tutPhysics.jpg"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div
+              class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+            >
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary"
+                  >Unity Basics</strong
+                >
+                <h3 class="mb-0">Animation</h3>
+                <!-- <div class="mb-1 text-muted">Nov 12</div> -->
+                <p class="card-text mb-auto">
+                  Learn how to animate the player character to match the player
+                  game inputs.
+                </p>
+                <a
+                  href="https://www.youtube.com/watch?v=p8VvTEs8zp4&list=PL4Yjq9yLt-GiLsO0xji0vxwcm9b0PLq4a&index=5"
+                  class="stretched-link"
+                  >Watch Video</a
+                >
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img
+                  class="tutImages"
+                  width="200"
+                  height="250"
+                  src="assets/img/GameDevTuts/tutSprites.jpg"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div
+              class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+            >
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary"
+                  >Unity Basics</strong
+                >
+                <h3 class="mb-0">Tilemaps</h3>
+                <!-- <div class="mb-1 text-muted">Nov 12</div> -->
+                <p class="card-text mb-auto">
+                  Learn how to use tilemaps in tilemaps in Unity to create your
+                  very own level designs.
+                </p>
+                <a
+                  href="https://www.youtube.com/watch?v=08YKCpjedE0&list=PL4Yjq9yLt-GiLsO0xji0vxwcm9b0PLq4a&index=4"
+                  class="stretched-link"
+                  >Watch Video</a
+                >
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img
+                  class="tutImages"
+                  width="200"
+                  height="250"
+                  src="assets/img/GameDevTuts/tutTilemap.jpg"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div
+              class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+            >
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary"
+                  >Unity Basics</strong
+                >
+                <h3 class="mb-0">Enemy AI</h3>
+                <!-- <div class="mb-1 text-muted">Nov 12</div> -->
+                <p class="card-text mb-auto">
+                  Learn how to create intelligent enemies with the use of simple
+                  Enemy AI.
+                </p>
+                <a
+                  href="https://www.youtube.com/watch?v=qddZ_HOFjn0&list=PL4Yjq9yLt-GiLsO0xji0vxwcm9b0PLq4a&index=3"
+                  class="stretched-link"
+                  >Watch Video</a
+                >
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img
+                  class="tutImages"
+                  width="200"
+                  height="250"
+                  src="assets/img/GameDevTuts/tutEnemyAI.jpg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center" id="CollaborationsInfo">
+        <br />
+        <h2>Collaborations</h2>
+        <img
+          class="displaySectionImage about-image"
+          src="assets/img/about/Cropped_Collaborations.png"
+        />
+        <p>
+          We host collaborations within the NUS GDG to get students involved in
+          making games. Members may choose to join either or both of the
+          following pathways depending on skill level.
+        </p>
+
+        <div class="container row">
+          <div class="card my-3">
+            <div class="card-header row">
+              <div class="row">
+                <img
+                  src="assets/img/logos/paper-plane.png"
+                  alt=""
+                  class="icoImg"
+                />
+                <h6 class="headerTxt">Beginner</h6>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Level 1 Games</h5>
+              <p class="card-text">
+                Level 1 Games equipts new game developers with the tools and
+                skills to build basic games. They are a great way to get started
+                with game development, working with your randomly assigned
+                teammates to build your first game. An exco will be attached to
+                each team to guide you through the project.
+              </p>
+            </div>
+          </div>
+
+          <div class="card my-3">
+            <div class="card-header row">
+              <div class="row">
+                <img src="assets/img/logos/shuttle.png" alt="" class="icoImg" />
+                <h6 class="headerTxt">Advanced</h6>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Project Dev</h5>
+              <p class="card-text">
+                Project Dev is a more advanced game development project that is
+                largely independent. It allows the more experienced devs to work
+                together and create their own games. An exco member will be
+                attached to each group to provide tips and field queries as
+                needed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center" id="GameJamsInfo">
+        <br />
+        <h2>Game Jams</h2>
+        <img
+          class="displaySectionImage about-image"
+          src="assets/img/about/Cropped_Game_Jams.png"
+        />
+        <p>
+          Game Jams are a way to get students involved in making games. NUS GDG
+          Hosts 2 Game Jams Annually.
+        </p>
+
+        <div class="container">
+          <ul class="timeline">
+            <li>
+              <div class="timeline-image">
+                <img
+                  class="rounded-circle img-fluid"
+                  src="assets/img/about/2.jpg"
+                  alt="..."
+                />
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>SLF Jam</h4>
+                  <h5 class="subheading">August</h5>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                    The SLF Jam is a jam to showcase our clubs games during SLF
+                    student life fair.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <img
+                  class="rounded-circle img-fluid logoTransparent"
+                  src="assets/img/logos/gamecraftLogo2.png"
+                  alt="..."
+                />
+              </div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4>GameCraft</h4>
+                  <h5 class="subheading">December</h5>
+                </div>
+                <div class="timeline-body">
+                  <p class="text-muted">
+                    GameCraft is a friendly competition to showcase all of our
+                    skills throughout the year.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container text-center" id="ProfessionalTalksInfo">
+        <br />
+        <h2>Professional Talks</h2>
+        <img
+          class="displaySectionImage about-image"
+          src="assets/img/about/Cropped_Professional_Talks.png"
+        />
+        <p>
+          We occasionally host professional talks on game development and game
+          design. These talks were previously conducted by Prof Alex and other
+          guest speakers.
+        </p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/videoseries?list=PL4Yjq9yLt-Ghgfqz0BC7yqq6gYz0rWH-c"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </section>
     <!-- Portfolio Grid-->
@@ -119,10 +439,43 @@
         <div class="text-center">
           <h2 class="section-heading text-uppercase">Portfolio</h2>
           <h3 class="section-subheading text-muted">
-            Take a look at some of the games developed during our game jams here!
+            Take a look at some of the games developed during our game jams
+            here!
           </h3>
         </div>
         <div class="row">
+          <div class="col-lg-4 col-sm-6 mb-4">
+            <!-- Portfolio item 0-->
+            <div class="portfolio-item">
+              <a
+                class="portfolio-link"
+                href="https://itch.io/jam/gamecraft-2021/rate/1322788"
+              >
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content">
+                    <video
+                      autoplay="autoplay"
+                      loop="loop"
+                      width="100%"
+                      muted
+                      src="assets/img/webm/A2wJky66rH.webm"
+                    ></video>
+                  </div>
+                </div>
+                <img
+                  class="img-fluid portfolio-image"
+                  src="assets/img/portfolio/A2wJky66rH_cover.png"
+                  alt="..."
+                />
+              </a>
+              <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">A2wJky66rH</div>
+                <div class="portfolio-caption-subheading text-muted">
+                  Winner of GameCraft 2021
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col-lg-4 col-sm-6 mb-4">
             <!-- Portfolio item 1-->
             <div class="portfolio-item">
@@ -132,8 +485,13 @@
               >
                 <div class="portfolio-hover">
                   <div class="portfolio-hover-content">
-                    <video autoplay="autoplay" loop="loop" width="100%" muted src="assets/img/webm/kittenmitten.webm">
-                    </video>
+                    <video
+                      autoplay="autoplay"
+                      loop="loop"
+                      width="100%"
+                      muted
+                      src="assets/img/webm/kittenmitten.webm"
+                    ></video>
                   </div>
                 </div>
                 <img
@@ -159,8 +517,13 @@
               >
                 <div class="portfolio-hover">
                   <div class="portfolio-hover-content">
-                    <video autoplay="autoplay" loop="loop" width="100%" muted src="assets/img/webm/memorylanes.webm">
-                    </video>
+                    <video
+                      autoplay="autoplay"
+                      loop="loop"
+                      width="100%"
+                      muted
+                      src="assets/img/webm/memorylanes.webm"
+                    ></video>
                   </div>
                 </div>
                 <img
@@ -180,14 +543,16 @@
           <div class="col-lg-4 col-sm-6 mb-4">
             <!-- Portfolio item 3-->
             <div class="portfolio-item">
-              <a
-                class="portfolio-link"
-                href="https://cronyx.itch.io/cogworks"
-              >
+              <a class="portfolio-link" href="https://cronyx.itch.io/cogworks">
                 <div class="portfolio-hover">
                   <div class="portfolio-hover-content">
-                    <video autoplay="autoplay" loop="loop" width="100%" muted src="assets/img/webm/cogworks.webm">
-                    </video>
+                    <video
+                      autoplay="autoplay"
+                      loop="loop"
+                      width="100%"
+                      muted
+                      src="assets/img/webm/cogworks.webm"
+                    ></video>
                   </div>
                 </div>
                 <img
@@ -521,33 +886,102 @@
         </div>
         <div id="basic-main-content">
           <div class="row text-center justify-content-center">
-	        <div class="col-9">
-		      <h3 class="section-subheading white-text">If you're interested in joining NUSGDG, connect with us through Email, Discord or Instagram!</h3>
-	        </div>
+            <div class="col-9">
+              <h3 class="section-subheading white-text">
+                If you're interested in joining NUSGDG, connect with us through
+                Email, Discord or Instagram! Also check out more of our games on
+                itch.io!
+              </h3>
+            </div>
           </div>
           <div class="row justify-content-center">
-            <div class="col-sm-4 col-6 justify-content-center">
-              <a class="mx-auto d-block contact" href="mailto:contact@nusgdg.org">
-                  <i class="white-text fas fa-envelope mx-auto d-block fa-10x"></i>
-                  <h3 class="text-center white-text-underline">Email</h3>
+            <div class="col-sm-3 col-6 justify-content-center">
+              <a
+                class="mx-auto d-block contact"
+                href="mailto:contact@nusgdg.org"
+              >
+                <i
+                  class="white-text fas fa-envelope mx-auto d-block fa-10x"
+                ></i>
+                <h3 class="text-center white-text-underline">Email</h3>
               </a>
-	        </div>
-            <div class="col-sm-4 col-6 justify-content-center">
-              <a class="mx-auto d-block contact" href="https://discord.gg/DrW3VeM">
-                  <i class="white-text fab fa-discord mx-auto d-block fa-10x"></i>
-                  <h3 class="text-center white-text-underline">Discord</h3>
+            </div>
+            <div class="col-sm-3 col-6 justify-content-center">
+              <a
+                class="mx-auto d-block contact"
+                href="https://discord.gg/DrW3VeM"
+              >
+                <i class="white-text fab fa-discord mx-auto d-block fa-10x"></i>
+                <h3 class="text-center white-text-underline">Discord</h3>
               </a>
-	        </div> 
-            <div class="col-sm-4 col-6 justify-content-center">
-              <a class="mx-auto d-block contact" href="https://www.instagram.com/nusgdg/">
-                  <i class="white-text fab fa-instagram mx-auto d-block fa-10x"></i>
-                  <h3 class="text-center white-text-underline">Instagram</h3>
+            </div>
+            <div class="col-sm-3 col-6 justify-content-center">
+              <a
+                class="mx-auto d-block contact"
+                href="https://www.instagram.com/nusgdg/"
+              >
+                <i
+                  class="white-text fab fa-instagram mx-auto d-block fa-10x"
+                ></i>
+                <h3 class="text-center white-text-underline">Instagram</h3>
               </a>
-	        </div>
+            </div>
+            <div class="col-sm-3 col-6 justify-content-center">
+              <a class="mx-auto d-block contact" href="https://nusgdg.itch.io/">
+                <i class="white-text fab fa-itch-io mx-auto d-block fa-10x"></i>
+                <h3 class="text-center white-text-underline">Itch.io</h3>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Modal for Credits -->
+    <div
+      class="modal fade"
+      id="creditsModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Credits</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <a
+              href="https://www.flaticon.com/free-icons/send"
+              title="send icons"
+              >Send icons created by Pixel perfect - Flaticon</a
+            >
+            <a
+              href="https://www.flaticon.com/free-icons/launch"
+              title="launch icons"
+              >Launch icons created by Freepik - Flaticon</a
+            >
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer-->
     <footer class="footer py-4">
       <div class="container">
@@ -556,14 +990,25 @@
             Copyright &copy; nus-gdg.github.io 2021
           </div>
           <div class="col-lg-4 my-3 my-lg-0">
-            <a class="btn btn-dark btn-social mx-2" href="mailto:contact@nusgdg.org"
+            <a
+              class="btn btn-dark btn-social mx-2"
+              href="mailto:contact@nusgdg.org"
               ><i class="fas fa-envelope"></i
             ></a>
-            <a class="btn btn-dark btn-social mx-2" href="https://discord.gg/DrW3VeM"
+            <a
+              class="btn btn-dark btn-social mx-2"
+              href="https://discord.gg/DrW3VeM"
               ><i class="fab fa-discord"></i
             ></a>
-            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/nusgdg/"
+            <a
+              class="btn btn-dark btn-social mx-2"
+              href="https://www.instagram.com/nusgdg/"
               ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              class="btn btn-dark btn-social mx-2"
+              href="https://nusgdg.itch.io/"
+              ><i class="fab fa-itch-io"></i
             ></a>
           </div>
           <div class="col-lg-4 text-lg-end">
@@ -572,6 +1017,23 @@
             >
             <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
           </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row align-items-center my-3">
+          <button
+            type="button"
+            class="btn btn-outline-primary btn-rounded mx-auto"
+            style="
+              --bs-btn-padding-y: 0.25rem;
+              --bs-btn-padding-x: 0.5rem;
+              --bs-btn-font-size: 0.75rem;
+            "
+            data-bs-toggle="modal"
+            data-bs-target="#creditsModal"
+          >
+            Credits
+          </button>
         </div>
       </div>
     </footer>
