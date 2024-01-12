@@ -1,0 +1,8 @@
+@import 'utils/variables';
+
+* {
+    box-sizing: border-box;
+    font-family: $primary-font, $backup-font;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;900&display=swap');
