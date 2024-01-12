@@ -1,8 +1,18 @@
 @import 'utils/variables';
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;900&display=swap');
+
 
 * {
     box-sizing: border-box;
     font-family: $primary-font, $backup-font;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;900&display=swap');
+// Fonts
+$headings: $h1, $h2, $h3, $h4, $h5;
+@for $i from 1 through length($headings) {
+    h#{$i} {
+        font-size: nth($headings, $i);
+        line-height: nth($headings, $i) * 1.5;
+    }
+}
+
