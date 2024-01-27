@@ -2,7 +2,12 @@
 
 ## References
 
-### Sass Commands (cd to app/styles folder)
+### Project Commands (cd to nusgdg folder)
+```
+npm run dev
+```
+
+### Sass Commands (cd to nusgdg/app/styles folder)
 ```
 npm install sass -g
 ```
