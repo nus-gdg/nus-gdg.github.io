@@ -1,0 +1,38 @@
+.nav {
+  padding: 30px 130px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: rgb(231, 231, 231) 1px solid;
+
+  &-logo {
+    width: 250px;
+  }
+
+  &-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4.68vw;
+
+    &-internal {
+      display: flex;
+      flex-direction: row;
+      gap: 4.68vw;
+    }
+  }
+
+  &-link {
+    color: black;
+
+    :visited {
+      color: black;
+    }
+  }
+
+  &-gamecraft {
+    color: white;
+    text-decoration: none;
+  }
+}
