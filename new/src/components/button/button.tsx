@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 
 type ButtonProps = {
-  onClick?: () => void,
+  onClick?: () => void;
 };
 
 const Button = ({ children, onClick }: PropsWithChildren<ButtonProps>): JSX.Element => {
