@@ -5,6 +5,9 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: rgb(231, 231, 231) 1px solid;
+  position: sticky;
+  top: 0;
+  background-color: white;
 
   &-logo {
     width: 250px;
