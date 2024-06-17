@@ -1,4 +1,4 @@
-import { DISCORD_INVITE_LINK } from "../../constants/urls";
+import { DISCORD_INVITE_LINK } from "../../constants/discord";
 import discordLogo from "../../assets/logos/discord_logo.svg";
 import Button from "../../components/button/button";
 
