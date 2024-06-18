@@ -17,7 +17,14 @@
       font-size: 50px;
       font-weight: 900;
       line-height: 130%;
-      width: 42vw;
+
+      @media (min-width: 1024px) {
+        width: 42vw;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 40px;
+      }
     }
 
     &-creative {
@@ -30,7 +37,10 @@
     &-sm {
       font-size: 18px;
       line-height: 150%;
-      width: 29vw;
+
+      @media (min-width: 1024px) {
+        width: 29vw;
+      }
     }
   }
 
@@ -41,12 +51,18 @@
   }
 
   &-banner {
-    position: absolute;
-    top: 100px;
-    right: 3.6vw;
+    @media (min-width: 1024px) {
+      position: absolute;
+      top: 100px;
+      right: 3.6vw;
+    }
 
     img {
       width: 51.4vw;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
     }
   }
 }

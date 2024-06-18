@@ -14,6 +14,9 @@ const Home = (): JSX.Element => {
             experience necessary, beginners are warmly welcomed!
           </div>
         </div>
+        <div className="home-banner">
+          <img src={landingImage} alt="" />
+        </div>
         <div className="home-learn-more">
           <Button onClick={() => (window.location.hash = "#about")}>
             <a href="#about" className="home-learn-more-text">
@@ -21,9 +24,6 @@ const Home = (): JSX.Element => {
             </a>
           </Button>
         </div>
-      </div>
-      <div className="home-banner">
-        <img src={landingImage} alt="" />
       </div>
     </div>
   );
