@@ -7,7 +7,7 @@ import Button from "../../components/button/button";
 
 const Contact = (): JSX.Element => {
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       <div className="discord">
         <div className="discord-logo">
           <img src={discordLogo} alt="discord-logo"></img>
