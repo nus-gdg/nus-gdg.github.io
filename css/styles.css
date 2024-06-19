@@ -11433,6 +11433,7 @@ header.masthead .masthead-heading {
   justify-content: center;
   opacity: 0;
   transition: opacity ease-in-out 0.25s;
+  border-radius: 0.625rem 0.625rem 0rem 0rem;
   overflow: hidden;
 }
 #portfolio
