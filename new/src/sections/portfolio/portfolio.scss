@@ -119,18 +119,18 @@ $background-image-url: "../../assets/background/bg.png";
 
 .col-lg-4 {
     flex: 0 0 auto;
-    width: 100%; /* Full width by default */
-    max-width: calc(100% / 3); /* Adjust to desired number of columns per row */
+    width: 100%; 
+    max-width: calc(100% / 3); 
     padding-right: calc(var(--bs-gutter-x) * 0.5);
     padding-left: calc(var(--bs-gutter-x) * 0.5);
     margin-top: var(--bs-gutter-y);
   
     @media (min-width: 992px) {
-      width: calc(100% / 3); /* Three items per row on medium devices */
+      width: calc(100% / 3); 
     }
   
     @media (min-width: 1200px) {
-      width: calc(100% / 4); /* Four items per row on large devices */
+      width: calc(100% / 4); 
     }
   }
 
