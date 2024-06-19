@@ -1,8 +1,20 @@
+import CrownIcon from "../../assets/icons/portfolio-icon2.svg";
 
-import CrownIcon from '../../assets/icons/portfolio-icon2.svg';
-
-
-const PortfolioItem = ({ link, videoSrc, imgSrc, buttonLabel, heading, description }: { link: string, videoSrc: string, imgSrc: string, buttonLabel: string, heading: string, description: string }) => (
+const PortfolioItem = ({
+  link,
+  videoSrc,
+  imgSrc,
+  buttonLabel,
+  heading,
+  description,
+}: {
+  link: string;
+  videoSrc: string;
+  imgSrc: string;
+  buttonLabel: string;
+  heading: string;
+  description: string;
+}) => (
   <div className="col-lg-4 col-sm-6 mb-4">
     <div className="portfolio-item">
       <a className="portfolio-link" href={link}>
