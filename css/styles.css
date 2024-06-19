@@ -642,6 +642,7 @@ progress {
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
+  height: fixed;
 }
 
 @media (min-width: 576px) {
@@ -684,6 +685,7 @@ progress {
     max-width: 1320px;
   }
 }
+
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -1481,7 +1483,7 @@ progress {
 
   .col-lg-4 {
     flex: 0 0 auto;
-    width: 33.33333333%;
+    width: 25%;
   }
 
   .col-lg-5 {
@@ -3717,6 +3719,26 @@ fieldset:disabled .btn {
   .collapsing {
     transition: none;
   }
+}
+
+.icon-portfolio {
+  position: absolute;
+}
+
+.header-portfolio {
+  margin-top: 5rem;
+  margin-bottom: 3.14rem;
+}
+
+.heading-portfolio {
+  margin-left: 7rem;
+  color: #86c5ff;
+  font: 700 21px "Red Hat Display", sans-serif;
+}
+.subheading-portfolio {
+  margin-left: 7rem;
+  color: var(--White-on-Black, #f8f8fe);
+  font: 900 51px "Red Hat Display", sans-serif;
 }
 
 .dropup,
@@ -7802,6 +7824,13 @@ fieldset:disabled .btn {
   background-image: var(--bs-gradient) !important;
 }
 
+.bg-portfolio {
+  background-image: url("../assets/img/portfolio/bg.png") !important;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .user-select-all {
   -webkit-user-select: all !important;
   -moz-user-select: all !important;
@@ -11217,10 +11246,14 @@ p {
 }
 .page-section h2.section-heading,
 .page-section .section-heading.h2 {
-  font-size: 2.5rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  color: var(--White-on-Black, #F8F8FE);
+  font-family: "Red Hat Display";
+  font-size: 50.52px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
 }
+
 .page-section h3.section-subheading,
 .page-section .section-subheading.h3 {
   font-size: 1rem;
@@ -11374,16 +11407,22 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
+
 #portfolio .portfolio-item {
-  max-width: 26rem;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  border-radius: 0.625rem;
+  background: #2A2D30;
+  position: relative; 
 }
+
 #portfolio .portfolio-item .portfolio-link {
+  text-decoration: none;
   position: relative;
   display: block;
-  margin: 0 auto;
 }
+
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
   display: flex;
   position: absolute;
@@ -11394,6 +11433,7 @@ header.masthead .masthead-heading {
   justify-content: center;
   opacity: 0;
   transition: opacity ease-in-out 0.25s;
+  overflow: hidden;
 }
 #portfolio
   .portfolio-item
@@ -11407,23 +11447,81 @@ header.masthead .masthead-heading {
   opacity: 1;
 }
 #portfolio .portfolio-item .portfolio-caption {
-  padding: 1.5rem;
-  text-align: center;
-  background-color: #fff;
+  margin-top: 2rem; 
+  margin-left: 2rem; 
+  margin-right: 2rem; 
+  text-align: left;
+  background-color: #2A2D30;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-  font-size: 1.5rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  padding-bottom: 0.4rem; 
+  color: #FFF;
+  font-family: "Red Hat Display";
+  font-size: 1rem;
+  font-style: normal;
   font-weight: 700;
-  margin-bottom: 0;
+  line-height: 130%; /* 1.73306rem */
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
-  font-style: italic;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #BBB;
+  padding-bottom: 4rem;
+  font-family: "Red Hat Display";
+  font-size: 0.76rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; 
+}
+
+#portfolio .portfolio-item .portfolio-button {
+  position: absolute;
+  top: 40%;
+  left: 2rem;
+  display: inline-flex;
+  padding: 0.4rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 50px;
+  background: #47494C;
+  color: var(--White-on-Black, #F8F8FE);
+  font-family: "Red Hat Display";
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+#portfolio .portfolio-item .portfolio-icon {
+  display: inline-flex;
+}
+
+#portfolio .portfolio-item .view-details {
+  position: absolute;
+  bottom: 1rem; 
+  right: 1rem;
+  left: 9rem;
+  display: inline-block; 
+  padding: 0.5rem 1rem; 
+  border-radius: 3.125rem;
+  background: var(--Blue, #1471C7);
+  text-align: center; 
+  color: #fff; 
+}
+
+#portfolio .portfolio-item .view-details .portfolio-link {
+  text-decoration: none;
+  color: #fff; 
+  font-family: "Red Hat Display";
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+#portfolio .portfolio-item .view-details .details-text {
+  font-size: 0.5rem;
+  text-decoration: none;
+  text-decoration-color: var(--White-on-Black, #F8F8FE);
 }
 
 .portfolio-modal .modal-dialog {
@@ -11748,7 +11846,8 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .portfolio-image {
-  width: 100%;
+  border-radius: 0.625rem 0.625rem 0rem 0rem;
+  width: 100%
 }
 
 .contact:hover,
