@@ -48,7 +48,7 @@ const Footer = (): JSX.Element => {
         <img className="footer-divider" src={horizontalDivider} alt=""></img>
       </div>
       <div className="footer-copyright">
-        <span className="footer-copyright-gdg">Copyright © 2023 NUSGDG</span>
+        <span className="footer-copyright-gdg">Copyright © 2024 NUSGDG</span>
       </div>
     </footer>
   );
