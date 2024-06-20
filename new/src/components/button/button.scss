@@ -1,4 +1,4 @@
-.button {
+button[class^="button"] {
   background-color: #1471c7;
   border: none;
   padding: 10px 40px;
@@ -11,5 +11,13 @@
 
   * {
     color: white;
+  }
+}
+
+button.button-discord {
+  background-color: #5865f2;
+
+  &:hover {
+    background-color: #4f5da2;
   }
 }

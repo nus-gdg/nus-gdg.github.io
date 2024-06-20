@@ -2,11 +2,12 @@ import { PropsWithChildren } from "react";
 
 type ButtonProps = {
   onClick?: () => void;
+  className?: string;
 };
 
-const Button = ({ children, onClick }: PropsWithChildren<ButtonProps>): JSX.Element => {
+const Button = ({ children, onClick, className = "button" }: PropsWithChildren<ButtonProps>): JSX.Element => {
   return (
-    <button className="button" onClick={onClick}>
+    <button className={className} onClick={onClick}>
       {children}
     </button>
   );

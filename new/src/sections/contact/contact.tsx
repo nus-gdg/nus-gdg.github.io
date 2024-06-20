@@ -19,7 +19,7 @@ const Contact = (): JSX.Element => {
           <span>Join our Discord Server</span>
         </div>
         <div className="discord-button-div">
-          <Button onClick={visitLinkFunction(DISCORD_INVITE_LINK)}>
+          <Button className="button-discord" onClick={visitLinkFunction(DISCORD_INVITE_LINK)}>
             <span className="discord-button-text">Join Discord &rarr;</span>
           </Button>
         </div>
