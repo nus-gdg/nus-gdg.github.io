@@ -1,12 +1,8 @@
 import nusgdgWhiteText from "../../assets/logos/nusgdg_text.svg";
-import horizontalDivider from "../../assets/icons/horizontal-divider.svg";
 import { GAMECRAFT_URL, GAMECRAFT_YEAR } from "../../constants/gamecraft";
 import Button from "../button/button";
-import useViewportDimensions from "../../hooks/useViewportWidth";
 
 const Footer = (): JSX.Element => {
-  const { viewportType } = useViewportDimensions();
-
   return (
     <footer className="footer">
       <div className="footer-top">
@@ -14,7 +10,7 @@ const Footer = (): JSX.Element => {
           <img className="footer-logo" src={nusgdgWhiteText} alt="nus-gdg" />
           <div className="footer-description">
             <p>
-              The NUS Games Development Group is a Student Interest Group at the National University at Singapore,
+              The NUS Games Development Group is a Student Interest Group at the National University of Singapore,
               dedicated to getting students involved in making games.
             </p>
             <p>We invite any students interested in game development to join us!</p>
