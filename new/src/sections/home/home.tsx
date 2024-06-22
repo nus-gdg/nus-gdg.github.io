@@ -14,15 +14,15 @@ const Home = (): JSX.Element => {
             experience necessary, beginners are warmly welcomed!
           </div>
         </div>
-        <div className="home-banner">
-          <img src={landingImage} alt="" />
-        </div>
         <div className="home-learn-more">
           <Button onClick={() => (window.location.hash = "#about")}>
             <a href="#about" className="home-learn-more-text">
               Learn More
             </a>
           </Button>
+        </div>
+        <div className="home-banner">
+          <img src={landingImage} alt="" />
         </div>
       </div>
     </div>
