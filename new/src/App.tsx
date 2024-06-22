@@ -1,4 +1,5 @@
 import "./App.scss";
+import Footer from "./components/footer/footer";
 import Nav from "./components/nav/nav";
 import About from "./sections/about/about";
 import Contact from "./sections/contact/contact";
@@ -13,6 +14,7 @@ const App = (): JSX.Element => {
       <About />
       <Portfolio />
       <Contact />
+      <Footer />
     </div>
   );
 };
