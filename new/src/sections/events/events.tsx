@@ -13,6 +13,10 @@ const Events = (): JSX.Element => {
             <span className="heading-events">Upcoming Events</span>
           </div>
         </div>
+        <div className="body-events">
+          <div className="main-event"></div>
+          <div className="other-events"></div>
+        </div>
       </div>
     </div>
   );
