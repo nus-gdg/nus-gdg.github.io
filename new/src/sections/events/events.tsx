@@ -1,4 +1,7 @@
 import HeaderIcon from "../../assets/icons/event-icon.svg";
+import { MAIN_EVENT, EVENTS } from "../../constants/events";
+import MainEventItem from "./mainEventItem";
+import EventItem from "./eventItem";
 
 const Events = (): JSX.Element => {
   return (
@@ -14,8 +17,14 @@ const Events = (): JSX.Element => {
           </div>
         </div>
         <div className="body-events">
-          <div className="main-event"></div>
-          <div className="other-events"></div>
+          <div className="main-event">
+            <MainEventItem {...MAIN_EVENT} />
+          </div>
+          <div className="event-list">
+            {EVENTS.map((event, index) => (
+              <EventItem {...event} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
