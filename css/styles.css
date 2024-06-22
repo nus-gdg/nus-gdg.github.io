@@ -11955,3 +11955,226 @@ section#contact form#contactForm :-ms-input-placeholder {
 .tutImages {
   object-fit: cover;
 }
+
+.activities-tabs .nav-link {
+  color: #1C1D1E;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  padding: 0.5em;
+}
+
+.activities-tabs .nav-link.active {
+  color: #F8F8FE;
+  background-color: #0A2135;
+  border-radius: 8px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  margin-top: 1em;
+}
+
+.card {
+  background-color: #fcfcfc;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 250px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  font-size: 0.7em;
+}
+
+.card-info .title-date {
+  color: #1471C7;
+
+  font-weight: bold;
+  margin-bottom: 0.1em;
+}
+
+.card-info .event-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.1em;
+  color: #333;
+}
+
+.card-info .event-description {
+  color: #666;
+}
+
+.card-info button {
+  align-self: flex-end;
+  background: #1471C7;
+  color: #fff;
+  border: none;
+  padding: 0.75em 1.5em;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.card-info button:hover {
+  background-color: #0056b3;
+}
+
+.view-more-collabs {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.view-more-collabs a {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.video-section {
+  margin-top: 2em;
+}
+
+.video-section h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 1em;
+  color: #1471C7;
+
+}
+
+.video-content {
+  display: flex;
+  gap: 1em;
+}
+
+.main-video {
+  flex: 2;
+  background-color: #000;
+  padding: 1em;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.main-video iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.main-video-title {
+  position: absolute;
+  top: 95%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  background-color: #1C1D1E;
+  padding: 0.5em;
+  text-align: left;
+  border-radius: 10px;
+  font-size: 1em;
+  text-indent: 5%;
+}
+
+.main-video p {
+  color: #fff;
+  text-align: left;
+  font-size: 1em;
+  background-color: #1C1D1E;
+  border-radius: 10px;
+}
+
+.other-videos {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  border-radius: 10px;
+  position: relative;
+}
+
+.other-video {
+  background-color: #000;
+  padding: 1em;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.other-video iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.other-video-title {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  background-color: #1C1D1E;
+  padding: 0.5em 0;
+  text-align: left;
+  border-radius: 10px;
+  font-size: 1em;
+  text-indent: 5%;
+}
+
+.other-video p {
+  color: #fff;
+  text-align: left;
+  margin-top: 0em;
+  font-size: 1em;
+  background-color: #1C1D1E;
+  padding: 0em;
+  border-radius: 10px;
+}
+
+.view-more-yt {
+  top: 3%;
+  position: relative;
+  text-align: center;
+}
+
+.view-more-yt button {
+  display: flex;
+  width: 434px;
+  padding: 10px 39px;
+  justify-content: center;
+  background-color: #1471C7;
+  color: #F8F8FE;
+  border: none;
+  border-radius: 50px;
+}
+
+.view-more-yt button:hover {
+  background-color: #0056b3;
+} 

@@ -208,3 +208,21 @@ function turnOffAllWiggle() {
   turnOffWiggle(GameDevelopmentTutorialsThumb);
   turnOffWiggle(CollaborationsThumb);
 }
+
+function showTab(tabId) {
+  var tabs = document.querySelectorAll('.tab-content');
+  tabs.forEach(function(tab) {
+    tab.classList.remove('active');
+  });
+
+  var selectedTab = document.getElementById(tabId);
+  selectedTab.classList.add('active');
+
+  var navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(function(navLink) {
+    navLink.classList.remove('active');
+  });
+
+  var activeNavLink = document.querySelector('a[href="#' + tabId + '"]');
+  activeNavLink.classList.add('active');
+}
