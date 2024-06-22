@@ -7,7 +7,7 @@ const Home = (): JSX.Element => {
       <div className="home-left">
         <div className="home-text">
           <div className="home-text-lg">
-            Unlock your <span className="home-text-creative">Creative</span> Potential in Game Development!
+            Unlock your <span className="home-text-creative">Creative </span> Potential in Game Development!
           </div>
           <div className="home-text-sm">
             Turn your enthusiasm for gaming into a talent for creating compelling, immersive experiences - no prior
