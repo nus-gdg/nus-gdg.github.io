@@ -1,0 +1,84 @@
+.event-card {
+  border-radius: 10px;
+  background: #f8f8fa;
+  padding: 1.6rem 0.8rem 0.8rem 1.6rem;
+  //   display: flex;
+  //   display: flex;
+  flex: 1 1 0;
+  //   flex-direction: column;
+}
+
+.event-card-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card-tagline {
+  color: var(--Blue, #1471c7);
+  font-family: "Red Hat Display";
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.event-name {
+  color: var(--Black, #1c1d1e);
+  font-family: "Red Hat Display";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.event-card-details {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  justify-content: space-between;
+}
+
+.event-card-description {
+  color: #595959;
+  font-family: "Red Hat Display";
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+}
+
+.event-card-button {
+  border-width: 0;
+  margin-top: 1rem;
+  display: inline-flex;
+  padding: 8px 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 50px;
+  background: var(--Blue, #1471c7);
+  color: var(--White-on-Black, #f8f8fe);
+  font-family: "Red Hat Display";
+  font-size: 12.8px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.event-card-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.event-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40%;
+}
+
+.event-card-icon img {
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
+}

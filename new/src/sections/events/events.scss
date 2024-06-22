@@ -1,5 +1,5 @@
 @import "./mainEventItem.scss";
-@import "./mainEventItem.scss";
+@import "./eventItem.scss";
 
 .events {
   width: 100%;
@@ -76,7 +76,7 @@
 }
 
 .icon-events img {
-  width: 80%;
+  max-width: 80%;
 }
 
 .header-text {
@@ -103,6 +103,20 @@
   line-height: normal;
 }
 
+.body-events {
+  display: flex;
+  flex-direction: row;
+}
+
 .main-event {
   width: 62.5%;
+}
+
+.event-list {
+  margin-left: 1rem;
+  width: calc(37.5% - 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-evenly;
 }

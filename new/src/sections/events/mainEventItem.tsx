@@ -13,7 +13,7 @@ interface Props {
 const MainEventItem = ({ name, details, link, mainIcon, sideIcon, date }: Props): JSX.Element => {
   const targetDate = date.toISOString();
   const { days, hours, minutes } = useCountdown(targetDate);
-  const tagline = details.join("•");
+  const tagline = details.join(" • ");
   return (
     <div className="main-event-card">
       <div className="main-event-header">
