@@ -71,18 +71,24 @@
 .header-events {
   display: flex;
   flex-direction: row;
+  align-items: end;
+  margin-bottom: 2.4rem;
+}
+
+.icon-events img {
+  width: 80%;
 }
 
 .header-text {
   display: flex;
   flex-direction: column;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .tagline-events {
   color: var(--Blue, #1471c7);
   font-family: "Red Hat Display";
-  font-size: 21.33px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -91,8 +97,12 @@
 .heading-events {
   color: var(--Black, #1c1d1e);
   font-family: "Red Hat Display";
-  font-size: 50.52px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
+}
+
+.main-event {
+  width: 62.5%;
 }

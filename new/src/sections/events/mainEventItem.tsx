@@ -16,7 +16,7 @@ const MainEventItem = ({ name, details, link, mainIcon, sideIcon, date }: Props)
   const tagline = details.join("•");
   return (
     <div className="main-event-card">
-      <div className="main-event-card-header">
+      <div className="main-event-header">
         <span className="main-event-tagline">{tagline}</span>
         <span className="main-event-name">{name}</span>
         <div className="main-event-countdown">
@@ -29,7 +29,14 @@ const MainEventItem = ({ name, details, link, mainIcon, sideIcon, date }: Props)
           <button className="main-event-button">Official Website→</button>
         </a>
       </div>
-      <div className="main-event-card-body"></div>
+      <div className="main-event-body">
+        <div className="main-event-main-icon">
+          <img src={mainIcon} />
+        </div>
+        <div className="main-event-side-icon">
+          <img src={sideIcon} />
+        </div>
+      </div>
     </div>
   );
 };
