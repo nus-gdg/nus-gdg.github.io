@@ -20,7 +20,7 @@ const Contact = (): JSX.Element => {
         </div>
         <div className="discord-button-div">
           <Button className="button button-discord" onClick={visitLinkFunction(DISCORD_INVITE_LINK)}>
-            <a className="discord-button-text" href={DISCORD_INVITE_LINK} target="_blank">
+            <a className="discord-button-text" href={DISCORD_INVITE_LINK} target="_blank" rel="noreferrer">
               Join Discord &rarr;
             </a>
           </Button>
@@ -32,15 +32,15 @@ const Contact = (): JSX.Element => {
           <span>and check out more of our games on itch.io!</span>
         </div>
         <div className="others-button-list">
-          <a className="others-button" href={EMAIL_LINK} target="_blank">
+          <a className="others-button" href={EMAIL_LINK} target="_blank" rel="noreferrer">
             <img className="others-button-logo" src={emailLogo} alt="email-logo"></img>
           </a>
           <span className="others-button-padding"></span>
-          <a className="others-button" href={INSTAGRAM_LINK} target="_blank">
+          <a className="others-button" href={INSTAGRAM_LINK} target="_blank" rel="noreferrer">
             <img className="others-button-logo" src={instagramLogo} alt="instagram-logo"></img>
           </a>
           <span className="others-button-padding"></span>
-          <a className="others-button" href={ITCH_IO_LINK} target="_blank">
+          <a className="others-button" href={ITCH_IO_LINK} target="_blank" rel="noreferrer">
             <img className="others-button-logo" src={itchIoLogo} alt="itch-io-logo"></img>
           </a>
         </div>
