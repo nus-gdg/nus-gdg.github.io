@@ -1,5 +1,5 @@
 import HeaderIcon from "../../assets/icons/portfolio-icon.png";
-import PortfolioItem from "./portfolioItem";
+import PortfolioItem from "./portfolio-item";
 import Thumbnail2021 from "../../assets/portfolio-thumbnails/A2wJky66rH_cover.png";
 import Thumbnail2020 from "../../assets/portfolio-thumbnails/kitten_mitten_cover.png";
 import Thumbnail2019 from "../../assets/portfolio-thumbnails/memory_lanes_cover.png";
@@ -9,9 +9,36 @@ const Webm2020 = require("../../assets/portfolio-thumbnails/kittenmitten.webm");
 const Webm2019 = require("../../assets/portfolio-thumbnails/memorylanes.webm");
 const Webm2018 = require("../../assets/portfolio-thumbnails/cogworks.webm");
 
+type PortfolioItemsType = {
+  link: string,
+  videoSrc: string,
+  imgSrc: string,
+  buttonLabel: string,
+  heading: string,
+  description: string,
+};
+
 const portfolioItems = [
   {
-    link: "https://itch.io/jam/gamecraft-2021/rate/1322788",
+    link: "https://kzfsg.itch.io/sliggy-the-slime",
+    videoSrc: Webm2023,
+    imgSrc: Thumbnail2023,
+    buttonLabel: "GameCraft 2023",
+    heading: "Sliggy the Slime",
+    description: "Dive into the thrilling world of Sliggy the Slime, an immersive puzzle-platformer game where strategy meets adventure. Kidnapped by the nefarious Dr. Doofus, Sliggy, a clever and resilient slime, must navigate the treacherous labyrinth of the doctor's laboratory to find freedom."
+  },
+  
+  {
+    link: "https://lio-lim.itch.io/the-runic-conjecture", 
+    videoSrc: Webm2022,
+    imgSrc: Thumbnail2022,
+    buttonLabel: "GameCraft 2022",
+    heading: "The Runic Conjecture",
+    description: "The Runic Conjecture is a magical puzzle game about experimenting and learning the meaning of mysterious runes. What may seem like Magic now is merely a Science that you have yet to understand."
+  },
+
+  {
+    link: "https://graphcalibur.itch.io/a2wjky66rh",
     videoSrc: Webm2021,
     imgSrc: Thumbnail2021,
     buttonLabel: "GameCraft 2021",
@@ -48,13 +75,13 @@ const portfolioItems = [
   },
 ];
 
-const Portfolio = () => {
+const Portfolio = (): JSX.Element => {
   return (
     <div className="portfolio" id="portfolio">
       <div className="container">
         <div className="header-portfolio">
           <div className="icon-portfolio">
-            <img src={HeaderIcon} />
+            <img src={HeaderIcon} alt ="..." />
           </div>
           <div className="heading-portfolio">Past game projects</div>
           <div className="subheading-portfolio">Our Portfolio</div>

@@ -26,7 +26,7 @@ const PortfolioItem = ({
         <img className="img-fluid portfolio-image" src={imgSrc} alt="..." />
       </a>
       <div className="portfolio-button">
-        <img src={CrownIcon} />
+        <img src={CrownIcon} alt="..." />
         {buttonLabel}
       </div>
       <div className="portfolio-caption">

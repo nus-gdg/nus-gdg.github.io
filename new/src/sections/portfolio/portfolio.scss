@@ -1,6 +1,15 @@
 $background-image-url: "../../assets/background/bg.png";
 
-.row {
+.portfolio {
+  background-image: url(#{$background-image-url}) !important;
+  background-size: 91.5%;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 0;
+}
+
+
+.portfolio .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
@@ -10,7 +19,7 @@ $background-image-url: "../../assets/background/bg.png";
   margin-left: calc(var(--bs-gutter-x) * -0.5);
 }
 
-.row > * {
+.portfolio .row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -19,15 +28,7 @@ $background-image-url: "../../assets/background/bg.png";
   margin-top: var(--bs-gutter-y);
 }
 
-.portfolio {
-  background-image: url(#{$background-image-url}) !important;
-  background-size: 91.5%;
-  width: 100%;
-  height: 100%;
-  padding: 3rem 0;
-}
-
-.container,
+.portfolio .container,
 .container-fluid,
 .container-xxl,
 .container-xl,
