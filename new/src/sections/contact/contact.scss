@@ -41,6 +41,7 @@
 
   &-button-text {
     color: white;
+    text-decoration: none;
     font-family: "Red Hat Display";
     font-weight: bold;
     font-size: $button-text-font-size-large;
@@ -88,15 +89,17 @@
   }
 
   &-button {
-    background-color: transparent;
-    height: 50px;
-    width: 50px;
     filter: invert(96%) sepia(100%) saturate(0%) hue-rotate(352deg) brightness(115%) contrast(102%);
-    padding: 5px;
 
     &:hover {
       filter: invert(88%) sepia(72%) saturate(525%) hue-rotate(61deg) brightness(101%) contrast(90%);
     }
+  }
+
+  &-button-logo {
+    height: 50px;
+    width: 50px;
+    padding: 5px; // easier to click
   }
 
   &-button-padding {

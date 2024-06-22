@@ -20,7 +20,9 @@ const Contact = (): JSX.Element => {
         </div>
         <div className="discord-button-div">
           <Button className="button button-discord" onClick={visitLinkFunction(DISCORD_INVITE_LINK)}>
-            <span className="discord-button-text">Join Discord &rarr;</span>
+            <a className="discord-button-text" href={DISCORD_INVITE_LINK} target="_blank">
+              Join Discord &rarr;
+            </a>
           </Button>
         </div>
       </div>
@@ -30,29 +32,17 @@ const Contact = (): JSX.Element => {
           <span>and check out more of our games on itch.io!</span>
         </div>
         <div className="others-button-list">
-          <input
-            type="image"
-            className="others-button"
-            src={emailLogo}
-            alt="email-logo"
-            onClick={visitLinkFunction(EMAIL_LINK)}
-          ></input>
+          <a className="others-button" href={EMAIL_LINK} target="_blank">
+            <img className="others-button-logo" src={emailLogo} alt="email-logo"></img>
+          </a>
           <span className="others-button-padding"></span>
-          <input
-            type="image"
-            className="others-button"
-            src={instagramLogo}
-            alt="instagram-logo"
-            onClick={visitLinkFunction(INSTAGRAM_LINK)}
-          ></input>
+          <a className="others-button" href={INSTAGRAM_LINK} target="_blank">
+            <img className="others-button-logo" src={instagramLogo} alt="instagram-logo"></img>
+          </a>
           <span className="others-button-padding"></span>
-          <input
-            type="image"
-            className="others-button"
-            src={itchIoLogo}
-            alt="itch-io-logo"
-            onClick={visitLinkFunction(ITCH_IO_LINK)}
-          ></input>
+          <a className="others-button" href={ITCH_IO_LINK} target="_blank">
+            <img className="others-button-logo" src={itchIoLogo} alt="itch-io-logo"></img>
+          </a>
         </div>
       </div>
     </div>
