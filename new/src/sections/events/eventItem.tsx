@@ -18,7 +18,7 @@ const EventItem = ({ name, details, description, link, icon }: Props): JSX.Eleme
         <div className="event-card-details">
           <span className="event-card-description">{description}</span>
           <a href={link}>
-            <button className="event-card-button">View details→</button>
+            <button className="event-card-button">Browse games→</button>
           </a>
         </div>
         <div className="event-card-icon">
