@@ -25,7 +25,7 @@ const EventItem = ({ name, details, description, link, icon }: Props): JSX.Eleme
           </a>
         </div>
         <div className="event-card-body-icon">
-          <img src={icon} />
+          <img src={icon} alt="icon for event" />
         </div>
       </div>
     </div>

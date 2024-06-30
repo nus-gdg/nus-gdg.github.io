@@ -24,7 +24,7 @@ const useCountdown = (targetDate: string) => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [calculateTimeLeft]);
 
   return timeLeft;
 };

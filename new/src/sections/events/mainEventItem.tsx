@@ -21,7 +21,7 @@ const MainEventItem = ({ name, details, link, mainIcon, sideIcon, date }: Props)
         <span className="event-main-card-header-tagline">{tagline}</span>
         <span className="event-main-card-header-name">{name}</span>
         <div className="event-main-card-header-countdown">
-          <img src={HourGlass} />
+          <img src={HourGlass} alt="hourglass icon" />
           <span className="event-main-card-header-countdown-text">
             <b>{days}</b> DAYS<b> {hours} </b> HOURS <b>{minutes}</b> MINUTES
           </span>
@@ -32,10 +32,10 @@ const MainEventItem = ({ name, details, link, mainIcon, sideIcon, date }: Props)
       </div>
       <div className="event-main-card-body">
         <div className="event-main-card-body-main-icon">
-          <img src={mainIcon} />
+          <img src={mainIcon} alt="main icon for main event" />
         </div>
         <div className="event-main-card-body-side-icon">
-          <img src={sideIcon} />
+          <img src={sideIcon} alt="side icon for main event" />
         </div>
       </div>
     </div>
