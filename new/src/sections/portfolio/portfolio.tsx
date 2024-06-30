@@ -1,40 +1,47 @@
+import React, { useState } from "react";
 import HeaderIcon from "../../assets/icons/portfolio-icon.png";
 import PortfolioItem from "./portfolio-item";
+import Thumbnail2023 from "../../assets/portfolio-thumbnails/sliggy_the_slime.png";
+import Thumbnail2022 from "../../assets/portfolio-thumbnails/the_runic_conjecture.png";
 import Thumbnail2021 from "../../assets/portfolio-thumbnails/A2wJky66rH_cover.png";
 import Thumbnail2020 from "../../assets/portfolio-thumbnails/kitten_mitten_cover.png";
 import Thumbnail2019 from "../../assets/portfolio-thumbnails/memory_lanes_cover.png";
 import Thumbnail2018 from "../../assets/portfolio-thumbnails/cogworks_cover.png";
+const Webm2023 = require("../../assets/portfolio-thumbnails/the_runic_conjecture.gif");
+const Webm2022 = require("../../assets/portfolio-thumbnails/the_runic_conjecture.gif");
 const Webm2021 = require("../../assets/portfolio-thumbnails/A2wJky66rH.webm");
 const Webm2020 = require("../../assets/portfolio-thumbnails/kittenmitten.webm");
 const Webm2019 = require("../../assets/portfolio-thumbnails/memorylanes.webm");
 const Webm2018 = require("../../assets/portfolio-thumbnails/cogworks.webm");
 
 type PortfolioItemsType = {
-  link: string,
-  videoSrc: string,
-  imgSrc: string,
-  buttonLabel: string,
-  heading: string,
-  description: string,
+  link: string;
+  videoSrc: string;
+  imgSrc: string;
+  buttonLabel: string;
+  heading: string;
+  description: string;
 };
 
-const portfolioItems = [
+const portfolioItems: PortfolioItemsType[] = [
   {
     link: "https://kzfsg.itch.io/sliggy-the-slime",
     videoSrc: Webm2023,
     imgSrc: Thumbnail2023,
     buttonLabel: "GameCraft 2023",
     heading: "Sliggy the Slime",
-    description: "Dive into the thrilling world of Sliggy the Slime, an immersive puzzle-platformer game where strategy meets adventure. Kidnapped by the nefarious Dr. Doofus, Sliggy, a clever and resilient slime, must navigate the treacherous labyrinth of the doctor's laboratory to find freedom."
+    description:
+      "Sliggy the Slime is a unique puzzle-platformer with a twist. Kidnapped by Dr. Doofus, Sliggy must navigate a treacherous lab, unlock paths, and escape.",
   },
-  
+
   {
-    link: "https://lio-lim.itch.io/the-runic-conjecture", 
+    link: "https://lio-lim.itch.io/the-runic-conjecture",
     videoSrc: Webm2022,
     imgSrc: Thumbnail2022,
     buttonLabel: "GameCraft 2022",
     heading: "The Runic Conjecture",
-    description: "The Runic Conjecture is a magical puzzle game about experimenting and learning the meaning of mysterious runes. What may seem like Magic now is merely a Science that you have yet to understand."
+    description:
+      "The Runic Conjecture is a magical puzzle game about experimenting and learning the meaning of mysterious runes. What may seem like Magic now is merely a Science that you have yet to understand.",
   },
 
   {
@@ -76,18 +83,26 @@ const portfolioItems = [
 ];
 
 const Portfolio = (): JSX.Element => {
+  const [showAll, setShowAll] = useState(false);
+
+  const handleViewAll = () => {
+    if (!showAll) {
+      setShowAll(true);
+    }
+  };
+
   return (
     <div className="portfolio" id="portfolio">
       <div className="container">
         <div className="header-portfolio">
           <div className="icon-portfolio">
-            <img src={HeaderIcon} alt ="..." />
+            <img src={HeaderIcon} alt="..." />
           </div>
           <div className="heading-portfolio">Past game projects</div>
           <div className="subheading-portfolio">Our Portfolio</div>
         </div>
         <div className="row">
-          {portfolioItems.map((item, index) => (
+          {portfolioItems.slice(0, showAll ? portfolioItems.length : 3).map((item, index) => (
             <PortfolioItem
               key={index}
               link={item.link}
@@ -99,7 +114,9 @@ const Portfolio = (): JSX.Element => {
             />
           ))}
         </div>
-        <div className="view-all-projects">View All Projects</div>
+        <div className={`view-all-projects ${showAll ? "disabled" : ""}`} onClick={handleViewAll}>
+          View All Projects
+        </div>
       </div>
     </div>
   );

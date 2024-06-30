@@ -1,4 +1,5 @@
 $background-image-url: "../../assets/background/bg.png";
+// 768 1024 1080 1536
 
 .portfolio {
   background-image: url(#{$background-image-url}) !important;
@@ -6,8 +7,12 @@ $background-image-url: "../../assets/background/bg.png";
   width: 100%;
   height: 100%;
   padding: 3rem 0;
-}
 
+  @media (max-width: 640px) {
+    background-size: 100%;
+    padding: 2rem 0;
+  }
+}
 
 .portfolio .row {
   --bs-gutter-x: 1.5rem;
@@ -17,6 +22,12 @@ $background-image-url: "../../assets/background/bg.png";
   margin-top: calc(var(--bs-gutter-y) * -1);
   margin-right: calc(var(--bs-gutter-x) * -0.5);
   margin-left: calc(var(--bs-gutter-x) * -0.5);
+  justify-content: center;
+  gap: 2.08rem;
+
+  @media (max-width: 640px) {
+    --bs-gutter-x: 0.5rem;
+  }
 }
 
 .portfolio .row > * {
@@ -28,7 +39,7 @@ $background-image-url: "../../assets/background/bg.png";
   margin-top: var(--bs-gutter-y);
 }
 
-.portfolio .container,
+.container,
 .container-fluid,
 .container-xxl,
 .container-xl,
@@ -41,10 +52,9 @@ $background-image-url: "../../assets/background/bg.png";
   margin-right: auto;
   margin-left: auto;
   height: fixed;
-  display: grid;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 640px) {
   .container-sm,
   .container {
     max-width: 540px;
@@ -59,66 +69,86 @@ $background-image-url: "../../assets/background/bg.png";
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .container-lg,
   .container-md,
   .container-sm,
   .container {
-    max-width: 960px;
+    max-width: 1024px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .container-xl,
   .container-lg,
   .container-md,
   .container-sm,
   .container {
-    max-width: 1140px;
+    max-width: 1280px;
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1536px) {
   .container-xxl,
   .container-xl,
   .container-lg,
   .container-md,
   .container-sm,
   .container {
-    max-width: 1320px;
+    max-width: 1520px;
   }
 }
 
-.header-portfolio {
+.portfolio .header-portfolio {
   margin-top: 5rem;
   margin-bottom: 3.14rem;
+
+  @media (max-width: 639px) {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
-.icon-portfolio {
+.portfolio .icon-portfolio {
   position: absolute;
 }
 
-.icon-portfolio img {
+.portfolio .icon-portfolio img {
   width: 20%;
+
+  @media (max-width: 639px) {
+    margin-left: 3rem;
+    width: 15%;
+  }
 }
 
-.heading-portfolio {
+.portfolio .heading-portfolio {
   margin-left: 7rem;
   color: #86c5ff;
   font:
     700 21px "Red Hat Display",
     sans-serif;
+
+  @media (max-width: 639px) {
+    margin-left: 8rem;
+    font-size: 18px;
+  }
 }
 
-.subheading-portfolio {
+.portfolio .subheading-portfolio {
   margin-left: 7rem;
   color: var(--White-on-Black, #f8f8fe);
   font:
     900 51px "Red Hat Display",
     sans-serif;
+
+  @media (max-width: 639px) {
+    margin-left: 8rem;
+    font-size: 36px;
+  }
 }
 
-.col-lg-4 {
+.portfolio .col-lg-4 {
   flex: 0 0 auto;
   width: 100%;
   max-width: calc(100% / 3);
@@ -126,31 +156,66 @@ $background-image-url: "../../assets/background/bg.png";
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 
-  @media (min-width: 992px) {
+  @media (max-width: 1024px) {
     width: calc(100% / 3);
   }
 
-  @media (min-width: 1200px) {
-    width: calc(100% / 4);
+  @media (max-width: 1280px) {
+    width: calc(100% / 2);
   }
 }
 
-.col-sm-6 {
+.portfolio .col-sm-6 {
   flex: 0 0 auto;
   width: 23%;
+
+  @media (max-width: 640px) {
+    width: 48%;
+  }
 }
 
-.mb-4 {
+.portfolio .mb-4 {
   margin-bottom: 1.5rem !important;
 }
 
 #portfolio .portfolio-item {
   width: 100%;
   height: 100%;
-  flex-shrink: 0;
+  flex-shrink: 1;
   border-radius: 0.625rem;
   background: #2a2d30;
   position: relative;
+  transition:
+    width 0.3s,
+    height 0.3s;
+
+  @media (max-width: 1536px) {
+    #portfolio .portfolio-item {
+      width: calc(100% / 3 - 2.08rem);
+      height: auto;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    #portfolio .portfolio-item {
+      width: calc(100% / 2 - 2.08rem);
+      height: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #portfolio .portfolio-item {
+      width: calc(100% / 2 - 2.08rem);
+      height: auto;
+    }
+
+    @media (max-width: 640px) {
+      #portfolio .portfolio-item {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -176,6 +241,10 @@ $background-image-url: "../../assets/background/bg.png";
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   font-size: 1.25rem;
   color: white;
+
+  @media (max-width: 639px) {
+    font-size: 1rem;
+  }
 }
 
 #portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
@@ -183,11 +252,16 @@ $background-image-url: "../../assets/background/bg.png";
 }
 
 #portfolio .portfolio-item .portfolio-caption {
-  margin-top: 2rem;
+  margin-top: 0rem;
   margin-left: 2rem;
   margin-right: 2rem;
   text-align: left;
   background-color: #2a2d30;
+
+  @media (max-width: 639px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
@@ -198,7 +272,18 @@ $background-image-url: "../../assets/background/bg.png";
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
-  /* 1.73306rem */
+
+  @media (max-width: 639px) {
+    font-size: 0.4rem;
+  }
+
+  @media (max-width: 1080px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 780px) {
+    font-size: 0.8rem;
+  }
 }
 
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
@@ -209,6 +294,21 @@ $background-image-url: "../../assets/background/bg.png";
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
+
+  @media (max-width: 1000px) {
+    font-size: 0.65rem;
+    padding-bottom: 2rem;
+  }
+
+  @media (max-width: 1080px) {
+    font-size: 0.65rem;
+    padding-bottom: 2rem;
+  }
+
+  @media (max-width: 780px) {
+    font-size: 0.4rem;
+    display: none;
+  }
 }
 
 #portfolio .portfolio-item .portfolio-icon {
@@ -216,14 +316,13 @@ $background-image-url: "../../assets/background/bg.png";
 }
 
 #portfolio .portfolio-item .portfolio-button {
-  position: absolute;
-  top: 40%;
-  left: 2rem;
+  //position: absolute;
+  transform: translate(10%, -50%);
   display: inline-flex;
   padding: 2% 1.5rem;
   justify-content: center;
-  align-items: center;
   gap: 0.5rem;
+  align-items: center;
   border-radius: 50px;
   background: #47494c;
   color: var(--White-on-Black, #f8f8fe);
@@ -232,33 +331,59 @@ $background-image-url: "../../assets/background/bg.png";
   font-style: normal;
   font-weight: 900;
   line-height: normal;
+
+  @media (min-width: 0px) and (max-width: 639px) {
+    padding: 1.5% 0.5rem;
+  }
+
+  @media (min-width: 640px) and (max-width: 765px) {
+    padding: 1.5% 0.5rem;
+    font-size: 0.5rem;
+  }
+
+  @media (min-width: 766px) and (max-width: 1080px) {
+    padding: 1.5% 0.5rem;
+    font-size: 0.7rem;
+  }
 }
 
 #portfolio .portfolio-item .portfolio-button img {
   width: 0.8rem;
+
+  @media (max-width: 639px) {
+    width: 0.6rem;
+  }
 }
 
 #portfolio .portfolio-item .view-details {
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  left: 9rem;
-  display: inline-block;
-  padding: 0.5rem 1rem;
+  top: 90%;
+  left: 45%;
+  padding: 0.1rem 0.9rem;
   border-radius: 3.125rem;
   background: var(--Blue, #1471c7);
   text-align: center;
   color: #fff;
+
+  @media (max-width: 1029px) {
+    position: relative;
+    top: 0%;
+    left: 0;
+  }
 }
 
 #portfolio .portfolio-item .view-details .portfolio-link {
   text-decoration: none;
   color: #fff;
   font-family: "Red Hat Display";
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
+
+  @media (max-width: 1029px) {
+    font-size: 0.5rem;
+  }
 }
 
 #portfolio .portfolio-item .view-details .details-text {
@@ -268,6 +393,7 @@ $background-image-url: "../../assets/background/bg.png";
 }
 
 #portfolio .view-all-projects {
+  cursor: pointer;
   color: #86c5ff;
   text-align: center;
   font-family: Red Hat Display;
@@ -277,19 +403,30 @@ $background-image-url: "../../assets/background/bg.png";
   line-height: 130%;
   margin-top: 2.9rem;
   text-decoration-line: underline;
+
+  @media (max-width: 639px) {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+  }
 }
 
-.img-fluid {
+#portfolio .view-all-projects.disabled {
+  cursor: not-allowed;
+  color: gray; /* Change text color to gray */
+  text-decoration: none; /* Remove underline */
+}
+
+.portfolio .img-fluid {
   max-width: 100%;
   height: auto;
 }
 
-.portfolio-image {
+.portfolio .portfolio-image {
   border-radius: 0.625rem 0.625rem 0rem 0rem;
   width: 100%;
 }
 
-.navbar > .container,
+#portfolio .portfolio .navbar > .container,
 .navbar > .container-fluid,
 .navbar > .container-sm,
 .navbar > .container-md,
@@ -302,7 +439,7 @@ $background-image-url: "../../assets/background/bg.png";
   justify-content: space-between;
 }
 
-.toast-container {
+.portfolio .toast-container {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -310,6 +447,6 @@ $background-image-url: "../../assets/background/bg.png";
   pointer-events: none;
 }
 
-.toast-container > :not(:last-child) {
+.portfolio .toast-container > :not(:last-child) {
   margin-bottom: 0.75rem;
 }
