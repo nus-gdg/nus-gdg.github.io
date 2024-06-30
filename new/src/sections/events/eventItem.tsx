@@ -13,18 +13,18 @@ const EventItem = ({ name, details, description, link, icon }: Props): JSX.Eleme
   return (
     <div className="event-card" id={name}>
       <div className="event-card-header">
-        <span className="event-card-tagline">{tagline}</span>
-        <span className="event-name">{name}</span>
+        <span className="event-card-header-tagline">{tagline}</span>
+        <span className="event-card-header-name">{name}</span>
       </div>
       <div className="event-card-body">
-        <div className="event-card-details">
-          <span className="event-card-description">{description}</span>
-          <a href={link} className="event-card-button" style={{ display: "inline-block" }}>
+        <div className="event-card-body-details">
+          <span className="event-card-body-description">{description}</span>
+          <a href={link} className="event-card-body-button" style={{ display: "inline-block" }}>
             Browse games→
             {/* <button className="event-card-button">Browse games→</button> */}
           </a>
         </div>
-        <div className="event-card-icon">
+        <div className="event-card-body-icon">
           <img src={icon} />
         </div>
       </div>

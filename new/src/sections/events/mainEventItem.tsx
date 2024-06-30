@@ -16,25 +16,25 @@ const MainEventItem = ({ name, details, link, mainIcon, sideIcon, date }: Props)
   const { days, hours, minutes } = useCountdown(targetDate);
   const tagline = useMemo(() => details.join(" • "), [details]);
   return (
-    <div className="main-event-card">
-      <div className="main-event-header">
-        <span className="main-event-tagline">{tagline}</span>
-        <span className="main-event-name">{name}</span>
-        <div className="main-event-countdown">
+    <div className="event-main-card">
+      <div className="event-main-card-header">
+        <span className="event-main-card-header-tagline">{tagline}</span>
+        <span className="event-main-card-header-name">{name}</span>
+        <div className="event-main-card-header-countdown">
           <img src={HourGlass} />
-          <span className="main-event-countdown-text">
+          <span className="event-main-card-header-countdown-text">
             <b>{days}</b> DAYS<b> {hours} </b> HOURS <b>{minutes}</b> MINUTES
           </span>
         </div>
-        <a href={link} className="main-event-button">
+        <a href={link} className="event-main-card-header-button">
           Official Website→
         </a>
       </div>
-      <div className="main-event-body">
-        <div className="main-event-main-icon">
+      <div className="event-main-card-body">
+        <div className="event-main-card-body-main-icon">
           <img src={mainIcon} />
         </div>
-        <div className="main-event-side-icon">
+        <div className="event-main-card-body-side-icon">
           <img src={sideIcon} />
         </div>
       </div>

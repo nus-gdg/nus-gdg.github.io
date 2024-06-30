@@ -5,22 +5,22 @@ import EventItem from "./eventItem";
 
 const Events = (): JSX.Element => {
   return (
-    <div className="events" id="events">
-      <div className="container">
-        <div className="header-events">
-          <div className="icon-events">
-            <img src={HeaderIcon} alt="events-logo" />
+    <div className="event" id="event">
+      <div className="event-container">
+        <div className="event-header">
+          <div className="event-header-icon">
+            <img src={HeaderIcon} alt="event-logo" />
           </div>
-          <div className="header-text">
-            <span className="tagline-events">Coming up next</span>
-            <span className="heading-events">Upcoming Events</span>
+          <div className="event-header-text">
+            <span className="event-header-text-tagline">Coming up next</span>
+            <span className="event-header-text-heading">Upcoming Events</span>
           </div>
         </div>
-        <div className="body-events">
-          <div className="main-event">
+        <div className="event-body">
+          <div className="event-body-main">
             <MainEventItem {...MAIN_EVENT} />
           </div>
-          <div className="event-list">
+          <div className="event-body-list">
             {EVENTS.map((event, index) => (
               <EventItem {...event} />
             ))}
