@@ -25,8 +25,8 @@ const MainEventItem = ({ name, details, link, mainIcon, sideIcon, date }: Props)
             <b>{days}</b> DAYS<b> {hours} </b> HOURS <b>{minutes}</b> MINUTES
           </span>
         </div>
-        <a href={link}>
-          <button className="main-event-button">Official Website→</button>
+        <a href={link} className="main-event-button">
+          Official Website→
         </a>
       </div>
       <div className="main-event-body">

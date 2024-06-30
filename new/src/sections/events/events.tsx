@@ -12,7 +12,7 @@ const Events = (): JSX.Element => {
             <img src={HeaderIcon} alt="events-logo" />
           </div>
           <div className="header-text">
-            <span className="tagline-events"> Coming up next</span>
+            <span className="tagline-events">Coming up next</span>
             <span className="heading-events">Upcoming Events</span>
           </div>
         </div>
