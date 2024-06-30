@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+
 interface Props {
   name: string;
   details: string[];
@@ -7,7 +9,7 @@ interface Props {
 }
 
 const EventItem = ({ name, details, description, link, icon }: Props): JSX.Element => {
-  const tagline = details.join(" • ");
+  const tagline = useMemo(() => details.join(" • "), [details]);
   return (
     <div className="event-card" id={name}>
       <div className="event-card-header">

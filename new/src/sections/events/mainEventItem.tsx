@@ -1,5 +1,6 @@
 import useCountdown from "../../hooks/useCountdown";
 import HourGlass from "../../assets/event-icons/hourglass.svg";
+import { useMemo } from "react";
 
 interface Props {
   name: string;
@@ -11,9 +12,9 @@ interface Props {
 }
 
 const MainEventItem = ({ name, details, link, mainIcon, sideIcon, date }: Props): JSX.Element => {
-  const targetDate = date.toISOString();
+  const targetDate = useMemo(() => date.toISOString(), [date]);
   const { days, hours, minutes } = useCountdown(targetDate);
-  const tagline = details.join(" • ");
+  const tagline = useMemo(() => details.join(" • "), [details]);
   return (
     <div className="main-event-card">
       <div className="main-event-header">
