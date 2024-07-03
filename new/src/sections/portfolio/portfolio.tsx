@@ -7,12 +7,12 @@ import Thumbnail2021 from "../../assets/portfolio-thumbnails/A2wJky66rH_cover.pn
 import Thumbnail2020 from "../../assets/portfolio-thumbnails/kitten_mitten_cover.png";
 import Thumbnail2019 from "../../assets/portfolio-thumbnails/memory_lanes_cover.png";
 import Thumbnail2018 from "../../assets/portfolio-thumbnails/cogworks_cover.png";
-const Webm2023 = require("../../assets/portfolio-thumbnails/the_runic_conjecture.gif");
-const Webm2022 = require("../../assets/portfolio-thumbnails/the_runic_conjecture.gif");
-const Webm2021 = require("../../assets/portfolio-thumbnails/A2wJky66rH.webm");
-const Webm2020 = require("../../assets/portfolio-thumbnails/kittenmitten.webm");
-const Webm2019 = require("../../assets/portfolio-thumbnails/memorylanes.webm");
-const Webm2018 = require("../../assets/portfolio-thumbnails/cogworks.webm");
+import Webm2023 from "../../assets/portfolio-thumbnails/sliggy_the_slime.webm";
+import Webm2022 from "../../assets/portfolio-thumbnails/the_runic_conjecture.webm";
+import Webm2021 from "../../assets/portfolio-thumbnails/A2wJky66rH.webm";
+import Webm2020 from "../../assets/portfolio-thumbnails/kittenmitten.webm";
+import Webm2019 from "../../assets/portfolio-thumbnails/memorylanes.webm";
+import Webm2018 from "../../assets/portfolio-thumbnails/cogworks.webm";
 
 type PortfolioItemsType = {
   link: string;
@@ -86,21 +86,19 @@ const Portfolio = (): JSX.Element => {
   const [showAll, setShowAll] = useState(false);
 
   const handleViewAll = () => {
-    if (!showAll) {
-      setShowAll(true);
-    }
+    setShowAll(true);
   };
 
   return (
     <div className="portfolio" id="portfolio">
-      <div className="container">
-        <div className="header-portfolio">
-          <div className="icon-portfolio">
-            <img src={HeaderIcon} alt="..." />
-          </div>
-          <div className="heading-portfolio">Past game projects</div>
-          <div className="subheading-portfolio">Our Portfolio</div>
+      <div className="top-portfolio">
+        <div className="icon-portfolio">
+          <img src={HeaderIcon} alt="..." />
         </div>
+        <div className="heading-portfolio">Past game projects</div>
+        <div className="subheading-portfolio">Our Portfolio</div>
+      </div>
+      <div className="container">
         <div className="row">
           {portfolioItems.slice(0, showAll ? portfolioItems.length : 3).map((item, index) => (
             <PortfolioItem
@@ -114,9 +112,11 @@ const Portfolio = (): JSX.Element => {
             />
           ))}
         </div>
-        <div className={`view-all-projects ${showAll ? "disabled" : ""}`} onClick={handleViewAll}>
-          View All Projects
-        </div>
+        {!showAll && (
+          <div className="view-all-projects" onClick={handleViewAll}>
+            View All Projects
+          </div>
+        )}
       </div>
     </div>
   );

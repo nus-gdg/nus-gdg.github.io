@@ -3,7 +3,7 @@ $background-image-url: "../../assets/background/bg.png";
 
 .portfolio {
   background-image: url(#{$background-image-url}) !important;
-  background-size: 91.5%;
+  background-size: 90%;
   width: 100%;
   height: 100%;
   padding: 3rem 0;
@@ -15,91 +15,60 @@ $background-image-url: "../../assets/background/bg.png";
 }
 
 .portfolio .row {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) * -0.5);
-  margin-left: calc(var(--bs-gutter-x) * -0.5);
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   justify-content: center;
-  gap: 2.08rem;
-
-  @media (max-width: 640px) {
-    --bs-gutter-x: 0.5rem;
-  }
+  gap: 3rem;
 }
 
-.portfolio .row > * {
-  flex-shrink: 0;
+.portfolio .col {
+  flex: 0 0 auto;
   width: 100%;
-  max-width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-top: var(--bs-gutter-y);
-}
-
-.container,
-.container-fluid,
-.container-xxl,
-.container-xl,
-.container-lg,
-.container-md,
-.container-sm {
-  width: 100%;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
-  margin-right: auto;
-  margin-left: auto;
-  height: fixed;
-}
-
-@media (min-width: 640px) {
-  .container-sm,
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container-md,
-  .container-sm,
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container {
-    max-width: 1024px;
-  }
 }
 
 @media (min-width: 1280px) {
-  .container-xl,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container {
-    max-width: 1280px;
+  .portfolio .col {
+    width: calc(100% / 4);
   }
 }
 
-@media (min-width: 1536px) {
-  .container-xxl,
-  .container-xl,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container {
-    max-width: 1520px;
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .portfolio .col {
+    width: calc(100% / 3);
   }
 }
 
-.portfolio .header-portfolio {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .portfolio .col {
+    width: calc(100% / 3);
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio .col {
+    width: calc(100% / 2);
+  }
+}
+
+.portfolio .mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.portfolio .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.08rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.portfolio .top-portfolio {
   margin-top: 5rem;
   margin-bottom: 3.14rem;
 
@@ -114,16 +83,16 @@ $background-image-url: "../../assets/background/bg.png";
 }
 
 .portfolio .icon-portfolio img {
+  margin-left: 3rem;
   width: 20%;
 
   @media (max-width: 639px) {
-    margin-left: 3rem;
     width: 15%;
   }
 }
 
 .portfolio .heading-portfolio {
-  margin-left: 7rem;
+  margin-left: 10rem;
   color: #86c5ff;
   font:
     700 21px "Red Hat Display",
@@ -136,8 +105,8 @@ $background-image-url: "../../assets/background/bg.png";
 }
 
 .portfolio .subheading-portfolio {
-  margin-left: 7rem;
-  color: var(--White-on-Black, #f8f8fe);
+  margin-left: 10rem;
+  color: #f8f8fe;
   font:
     900 51px "Red Hat Display",
     sans-serif;
@@ -146,36 +115,6 @@ $background-image-url: "../../assets/background/bg.png";
     margin-left: 8rem;
     font-size: 36px;
   }
-}
-
-.portfolio .col-lg-4 {
-  flex: 0 0 auto;
-  width: 100%;
-  max-width: calc(100% / 3);
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-top: var(--bs-gutter-y);
-
-  @media (max-width: 1024px) {
-    width: calc(100% / 3);
-  }
-
-  @media (max-width: 1280px) {
-    width: calc(100% / 2);
-  }
-}
-
-.portfolio .col-sm-6 {
-  flex: 0 0 auto;
-  width: 23%;
-
-  @media (max-width: 640px) {
-    width: 48%;
-  }
-}
-
-.portfolio .mb-4 {
-  margin-bottom: 1.5rem !important;
 }
 
 #portfolio .portfolio-item {
@@ -272,18 +211,6 @@ $background-image-url: "../../assets/background/bg.png";
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
-
-  @media (max-width: 639px) {
-    font-size: 0.4rem;
-  }
-
-  @media (max-width: 1080px) {
-    font-size: 0.8rem;
-  }
-
-  @media (max-width: 780px) {
-    font-size: 0.8rem;
-  }
 }
 
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
@@ -294,21 +221,6 @@ $background-image-url: "../../assets/background/bg.png";
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
-
-  @media (max-width: 1000px) {
-    font-size: 0.65rem;
-    padding-bottom: 2rem;
-  }
-
-  @media (max-width: 1080px) {
-    font-size: 0.65rem;
-    padding-bottom: 2rem;
-  }
-
-  @media (max-width: 780px) {
-    font-size: 0.4rem;
-    display: none;
-  }
 }
 
 #portfolio .portfolio-item .portfolio-icon {
@@ -325,26 +237,12 @@ $background-image-url: "../../assets/background/bg.png";
   align-items: center;
   border-radius: 50px;
   background: #47494c;
-  color: var(--White-on-Black, #f8f8fe);
+  color: #f8f8fe;
   font-family: "Red Hat Display";
   font-size: 0.8rem;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-
-  @media (min-width: 0px) and (max-width: 639px) {
-    padding: 1.5% 0.5rem;
-  }
-
-  @media (min-width: 640px) and (max-width: 765px) {
-    padding: 1.5% 0.5rem;
-    font-size: 0.5rem;
-  }
-
-  @media (min-width: 766px) and (max-width: 1080px) {
-    padding: 1.5% 0.5rem;
-    font-size: 0.7rem;
-  }
 }
 
 #portfolio .portfolio-item .portfolio-button img {
@@ -361,15 +259,9 @@ $background-image-url: "../../assets/background/bg.png";
   left: 45%;
   padding: 0.1rem 0.9rem;
   border-radius: 3.125rem;
-  background: var(--Blue, #1471c7);
+  background: #1471c7;
   text-align: center;
   color: #fff;
-
-  @media (max-width: 1029px) {
-    position: relative;
-    top: 0%;
-    left: 0;
-  }
 }
 
 #portfolio .portfolio-item .view-details .portfolio-link {
@@ -389,7 +281,7 @@ $background-image-url: "../../assets/background/bg.png";
 #portfolio .portfolio-item .view-details .details-text {
   font-size: 0.5rem;
   text-decoration: none;
-  text-decoration-color: var(--White-on-Black, #f8f8fe);
+  text-decoration-color: #f8f8fe;
 }
 
 #portfolio .view-all-projects {
@@ -401,19 +293,13 @@ $background-image-url: "../../assets/background/bg.png";
   font-style: normal;
   font-weight: 700;
   line-height: 130%;
-  margin-top: 2.9rem;
   text-decoration-line: underline;
-
-  @media (max-width: 639px) {
-    font-size: 0.8rem;
-    margin-top: 1.5rem;
-  }
 }
 
 #portfolio .view-all-projects.disabled {
   cursor: not-allowed;
-  color: gray; /* Change text color to gray */
-  text-decoration: none; /* Remove underline */
+  color: gray;
+  text-decoration: none;
 }
 
 .portfolio .img-fluid {

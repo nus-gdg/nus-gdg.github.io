@@ -15,7 +15,7 @@ const PortfolioItem = ({
   heading: string;
   description: string;
 }) => (
-  <div className="col-lg-4 col-sm-6 mb-4">
+  <div className="col mb-4">
     <div className="portfolio-item">
       <a className="portfolio-link" href={link}>
         <div className="portfolio-hover">
