@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: 1.8vw;
   background-color: #f8f8fa;
+  font-family: "Red Hat Display";
 
   &-header {
     display: flex;
@@ -24,13 +25,11 @@
       &-upper {
         font-size: 18px;
         font-weight: 700;
-        font-family: "Red Hat Display";
         color: #1471c7;
       }
 
       &-lower {
         font-size: 40px;
-        font-family: "Red Hat Display";
         font-weight: 900;
       }
     }
@@ -88,7 +87,6 @@
         flex-direction: row;
         gap: 5px;
         align-items: center;
-        font-family: "Red Hat Display";
         flex-grow: 1;
 
         @media (max-width: 1024px) {

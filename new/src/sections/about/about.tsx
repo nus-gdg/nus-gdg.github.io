@@ -9,6 +9,7 @@ import gameJamsIconFocused from "../../assets/icons/activity-game-jams-focused.s
 import talksIcon from "../../assets/icons/activity-talks.svg";
 import talksIconFocused from "../../assets/icons/activity-talks-focused.svg";
 import useViewportDimensions from "../../hooks/useViewportWidth";
+import Workshops from "./tabs/workshops";
 
 const About = (): JSX.Element => {
   const [currTab, setCurrTab] = useState<number>(0);
@@ -56,7 +57,7 @@ const About = (): JSX.Element => {
           />
         </div>
         <div className="about-sections">
-          {currTab === 0 && <div>Workshops</div>} {/* Add Workshop component */}
+          {currTab === 0 && <Workshops />}
           {currTab === 1 && <div>Collaborations</div>} {/* Add Collaboration component */}
           {currTab === 2 && <div>Game Jams</div>} {/* Add Game Jams component */}
           {currTab === 3 && <div>Professional Talks</div>} {/* Add Talks component */}
