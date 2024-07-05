@@ -1,5 +1,4 @@
 $background-image-url: "../../assets/background/bg.png";
-// 768 1024 1080 1536
 
 .portfolio {
   background-image: url(#{$background-image-url}) !important;
@@ -8,331 +7,296 @@ $background-image-url: "../../assets/background/bg.png";
   height: 100%;
   padding: 3rem 0;
 
-  @media (max-width: 640px) {
-    background-size: 100%;
-    padding: 2rem 0;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    justify-content: center;
+    gap: 3rem;
   }
-}
 
-.portfolio .row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
-  justify-content: center;
-  gap: 3rem;
-}
+  .col {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
 
-.portfolio .col {
-  flex: 0 0 auto;
-  width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-}
+    @media (min-width: 1280px) {
+      width: calc(100% / 4);
+    }
 
-@media (min-width: 1280px) {
-  .portfolio .col {
-    width: calc(100% / 4);
-  }
-}
+    @media (min-width: 1024px) and (max-width: 1279px) {
+      width: calc(100% / 3);
+    }
 
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .portfolio .col {
-    width: calc(100% / 3);
-  }
-}
+    @media (min-width: 768px) and (max-width: 1023px) {
+      width: calc(100% / 3);
+    }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .portfolio .col {
-    width: calc(100% / 3);
-  }
-}
-
-@media (max-width: 767px) {
-  .portfolio .col {
-    width: calc(100% / 2);
-  }
-}
-
-.portfolio .mb-4 {
-  margin-bottom: 1.5rem !important;
-}
-
-.portfolio .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2.08rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.portfolio .top-portfolio {
-  margin-top: 5rem;
-  margin-bottom: 3.14rem;
-
-  @media (max-width: 639px) {
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
-  }
-}
-
-.portfolio .icon-portfolio {
-  position: absolute;
-}
-
-.portfolio .icon-portfolio img {
-  margin-left: 3rem;
-  width: 20%;
-
-  @media (max-width: 639px) {
-    width: 15%;
-  }
-}
-
-.portfolio .heading-portfolio {
-  margin-left: 10rem;
-  color: #86c5ff;
-  font:
-    700 21px "Red Hat Display",
-    sans-serif;
-
-  @media (max-width: 639px) {
-    margin-left: 8rem;
-    font-size: 18px;
-  }
-}
-
-.portfolio .subheading-portfolio {
-  margin-left: 10rem;
-  color: #f8f8fe;
-  font:
-    900 51px "Red Hat Display",
-    sans-serif;
-
-  @media (max-width: 639px) {
-    margin-left: 8rem;
-    font-size: 36px;
-  }
-}
-
-#portfolio .portfolio-item {
-  width: 100%;
-  height: 100%;
-  flex-shrink: 1;
-  border-radius: 0.625rem;
-  background: #2a2d30;
-  position: relative;
-  transition:
-    width 0.3s,
-    height 0.3s;
-
-  @media (max-width: 1536px) {
-    #portfolio .portfolio-item {
-      width: calc(100% / 3 - 2.08rem);
-      height: auto;
+    @media (max-width: 767px) {
+      width: calc(100% / 2);
     }
   }
 
-  @media (max-width: 1024px) {
-    #portfolio .portfolio-item {
-      width: calc(100% / 2 - 2.08rem);
-      height: auto;
+  .mb-4 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.08rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .top-portfolio {
+    margin-top: 5rem;
+    margin-bottom: 3.14rem;
+
+    @media (max-width: 639px) {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
     }
   }
 
-  @media (max-width: 768px) {
-    #portfolio .portfolio-item {
-      width: calc(100% / 2 - 2.08rem);
-      height: auto;
-    }
+  .icon-portfolio {
+    position: absolute;
 
-    @media (max-width: 640px) {
-      #portfolio .portfolio-item {
-        width: 100%;
-        height: auto;
+    img {
+      margin-left: 3rem;
+      width: 20%;
+
+      @media (max-width: 639px) {
+        width: 15%;
       }
     }
   }
-}
 
-#portfolio .portfolio-item .portfolio-link {
-  text-decoration: none;
-  position: relative;
-  display: block;
-}
+  .heading-portfolio {
+    margin-left: 10rem;
+    color: #86c5ff;
+    font:
+      700 21px "Red Hat Display",
+      sans-serif;
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 200, 0, 0.9);
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity ease-in-out 0.25s;
-  border-radius: 0.625rem 0.625rem 0rem 0rem;
-  overflow: hidden;
-}
+    @media (max-width: 639px) {
+      margin-left: 8rem;
+      font-size: 18px;
+    }
+  }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
-  font-size: 1.25rem;
-  color: white;
+  .subheading-portfolio {
+    margin-left: 10rem;
+    color: #f8f8fe;
+    font:
+      900 51px "Red Hat Display",
+      sans-serif;
 
-  @media (max-width: 639px) {
+    @media (max-width: 639px) {
+      margin-left: 8rem;
+      font-size: 36px;
+    }
+  }
+
+  .portfolio-item {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 1;
+    border-radius: 0.625rem;
+    background: #2a2d30;
+    position: relative;
+    transition:
+      width 0.3s,
+      height 0.3s;
+
+    @media (max-width: 640px) {
+      width: 120%;
+      height: 100%;
+    }
+
+    .portfolio-link {
+      text-decoration: none;
+      position: relative;
+      display: block;
+
+      .portfolio-hover {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 200, 0, 0.9);
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity ease-in-out 0.25s;
+        border-radius: 0.625rem 0.625rem 0 0;
+        overflow: hidden;
+
+        .portfolio-hover-content {
+          font-size: 1.25rem;
+          color: white;
+
+          @media (max-width: 639px) {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      &:hover .portfolio-hover {
+        opacity: 1;
+      }
+    }
+
+    .portfolio-caption {
+      margin-top: 0;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      text-align: left;
+      background-color: #2a2d30;
+
+      @media (max-width: 639px) {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+
+      .portfolio-caption-heading {
+        padding-bottom: 0.4rem;
+        color: #fff;
+        font-family: "Red Hat Display";
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+      }
+
+      .portfolio-caption-subheading {
+        color: #bbb;
+        padding-bottom: 4rem;
+        font-family: "Red Hat Display";
+        font-size: 0.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+      }
+    }
+
+    .portfolio-icon {
+      display: inline-flex;
+    }
+
+    .portfolio-button {
+      transform: translate(10%, -50%);
+      display: inline-flex;
+      padding: 2% 1.5rem;
+      justify-content: center;
+      gap: 0.5rem;
+      align-items: center;
+      border-radius: 50px;
+      background: #47494c;
+      color: #f8f8fe;
+      font-family: "Red Hat Display";
+      font-size: 0.8rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+
+      img {
+        width: 0.8rem;
+
+        @media (max-width: 639px) {
+          width: 0.6rem;
+        }
+      }
+    }
+
+    .view-details {
+      position: absolute;
+      top: 90%;
+      left: 45%;
+      padding: 0.2rem 0.9rem;
+      border-radius: 3.125rem;
+      background: #1471c7;
+      text-align: center;
+      color: #fff;
+
+      .portfolio-link {
+        text-decoration: none;
+        color: #fff;
+        font-family: "Red Hat Display";
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+
+        @media (max-width: 1029px) {
+          font-size: 0.6rem;
+        }
+      }
+
+      .details-text {
+        font-size: 0.5rem;
+        text-decoration: none;
+        text-decoration-color: #f8f8fe;
+      }
+    }
+  }
+
+  .view-all-projects {
+    cursor: pointer;
+    color: #86c5ff;
+    text-align: center;
+    font-family: "Red Hat Display";
     font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    text-decoration-line: underline;
+
+    &.disabled {
+      cursor: not-allowed;
+      color: gray;
+      text-decoration: none;
+    }
+  }
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .portfolio-image {
+    border-radius: 0.625rem 0.625rem 0 0;
+    width: 100%;
+  }
+
+  .toast-container {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 100%;
+    pointer-events: none;
+
+    > :not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
   }
 }
 
-#portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
-  opacity: 1;
-}
-
-#portfolio .portfolio-item .portfolio-caption {
-  margin-top: 0rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  text-align: left;
-  background-color: #2a2d30;
-
-  @media (max-width: 639px) {
-    margin-left: 1rem;
-    margin-right: 1rem;
+#portfolio {
+  .navbar > .container,
+  .navbar > .container-fluid,
+  .navbar > .container-sm,
+  .navbar > .container-md,
+  .navbar > .container-lg,
+  .navbar > .container-xl,
+  .navbar > .container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
   }
-}
-
-#portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-  padding-bottom: 0.4rem;
-  color: #fff;
-  font-family: "Red Hat Display";
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 130%;
-}
-
-#portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
-  color: #bbb;
-  padding-bottom: 4rem;
-  font-family: "Red Hat Display";
-  font-size: 0.8rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 130%;
-}
-
-#portfolio .portfolio-item .portfolio-icon {
-  display: inline-flex;
-}
-
-#portfolio .portfolio-item .portfolio-button {
-  //position: absolute;
-  transform: translate(10%, -50%);
-  display: inline-flex;
-  padding: 2% 1.5rem;
-  justify-content: center;
-  gap: 0.5rem;
-  align-items: center;
-  border-radius: 50px;
-  background: #47494c;
-  color: #f8f8fe;
-  font-family: "Red Hat Display";
-  font-size: 0.8rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-}
-
-#portfolio .portfolio-item .portfolio-button img {
-  width: 0.8rem;
-
-  @media (max-width: 639px) {
-    width: 0.6rem;
-  }
-}
-
-#portfolio .portfolio-item .view-details {
-  position: absolute;
-  top: 90%;
-  left: 45%;
-  padding: 0.1rem 0.9rem;
-  border-radius: 3.125rem;
-  background: #1471c7;
-  text-align: center;
-  color: #fff;
-}
-
-#portfolio .portfolio-item .view-details .portfolio-link {
-  text-decoration: none;
-  color: #fff;
-  font-family: "Red Hat Display";
-  font-size: 0.75rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-
-  @media (max-width: 1029px) {
-    font-size: 0.5rem;
-  }
-}
-
-#portfolio .portfolio-item .view-details .details-text {
-  font-size: 0.5rem;
-  text-decoration: none;
-  text-decoration-color: #f8f8fe;
-}
-
-#portfolio .view-all-projects {
-  cursor: pointer;
-  color: #86c5ff;
-  text-align: center;
-  font-family: Red Hat Display;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 130%;
-  text-decoration-line: underline;
-}
-
-#portfolio .view-all-projects.disabled {
-  cursor: not-allowed;
-  color: gray;
-  text-decoration: none;
-}
-
-.portfolio .img-fluid {
-  max-width: 100%;
-  height: auto;
-}
-
-.portfolio .portfolio-image {
-  border-radius: 0.625rem 0.625rem 0rem 0rem;
-  width: 100%;
-}
-
-#portfolio .portfolio .navbar > .container,
-.navbar > .container-fluid,
-.navbar > .container-sm,
-.navbar > .container-md,
-.navbar > .container-lg,
-.navbar > .container-xl,
-.navbar > .container-xxl {
-  display: flex;
-  flex-wrap: inherit;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.portfolio .toast-container {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  max-width: 100%;
-  pointer-events: none;
-}
-
-.portfolio .toast-container > :not(:last-child) {
-  margin-bottom: 0.75rem;
 }
