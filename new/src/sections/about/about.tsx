@@ -12,6 +12,7 @@ import useViewportDimensions from "../../hooks/useViewportWidth";
 import Workshops from "./tabs/workshops";
 import Collaborations from "./tabs/collaborations";
 import ProfessionalTalks from "./tabs/professional-talks";
+import GameJams from "./tabs/gamejams";
 
 const About = (): JSX.Element => {
   const [currTab, setCurrTab] = useState<number>(0);
@@ -61,7 +62,7 @@ const About = (): JSX.Element => {
         <div className="about-sections">
           {currTab === 0 && <Workshops />}
           {currTab === 1 && <Collaborations />}
-          {currTab === 2 && <div>Game Jams</div>} {/* Add Game Jams component */}
+          {currTab === 2 && <GameJams />}
           {currTab === 3 && <ProfessionalTalks />}
         </div>
       </div>

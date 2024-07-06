@@ -1,0 +1,83 @@
+.gamejams {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &-caption {
+      color: #1471c7;
+      font-weight: 900;
+    }
+
+    &-title {
+      font-size: 22px;
+      font-weight: 700;
+    }
+  }
+
+  &-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 45px;
+    width: 400px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      width: 300px;
+    }
+
+    &-image {
+      width: 100%;
+      height: 500px;
+      overflow-y: hidden;
+      img {
+        max-width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        height: 380px;
+      }
+    }
+
+    &-text {
+      background-color: #1c1d1e;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      flex-grow: 1;
+
+      &-title {
+        color: #f8f8fe;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      &-period {
+        color: #86c5ff;
+      }
+
+      &-description {
+        color: #f8f8fe;
+        text-align: center;
+      }
+    }
+  }
+}
