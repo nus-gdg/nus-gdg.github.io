@@ -5,6 +5,31 @@
   align-items: center;
   gap: 30px;
 
+  &-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    max-width: 1000px;
+
+    &-title {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    &-description {
+      text-align: center;
+      line-height: 130%;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
   &-item {
     border: 1px solid rgba(0, 0, 0, 0.125);
     max-width: 1000px;
