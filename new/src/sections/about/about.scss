@@ -51,29 +51,21 @@
         height: 100px;
       }
 
-      &:not(:first-child) {
-        margin-left: -40px;
-
-        @media (max-width: 1024px) {
-          margin-left: -20px;
-        }
-
-        .about-nav-button-main {
-          padding: 20px 20px 20px 60px;
-
-          @media (max-width: 1024px) {
-            padding: 10px 10px 10px 30px;
-          }
-
-          @media (max-width: 768px) {
-            padding: 5px 5px 5px 25px;
-          }
-        }
-      }
-
       &:first-child {
         .about-nav-button-main {
           border-width: 1px 0px 1px 1px;
+        }
+      }
+
+      &:last-child {
+        svg {
+          polygon.about-nav-fill {
+            display: none;
+          }
+
+          line.about-nav-upper-line {
+            display: none;
+          }
         }
       }
 
@@ -90,8 +82,13 @@
         flex-grow: 1;
         background-color: white;
 
+        @media (max-width: 768px) {
+          padding: 5px;
+        }
+
         @media (max-width: 1024px) {
           justify-content: center;
+          padding: 10px;
         }
 
         &-focused {
@@ -110,6 +107,14 @@
           }
           polygon {
             fill: white;
+
+            &.about-nav-fill {
+              fill: white;
+
+              &-pre {
+                fill: #0a2135;
+              }
+            }
           }
         }
 
@@ -117,6 +122,10 @@
           svg {
             polygon {
               fill: #0a2135;
+
+              &.about-nav-fill {
+                fill: white;
+              }
             }
           }
         }

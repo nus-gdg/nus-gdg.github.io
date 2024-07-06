@@ -34,28 +34,32 @@ const About = (): JSX.Element => {
             text="Game Development Workshops & Tutorials"
             icon={workshopIcon}
             focusIcon={workshopIconFocused}
-            isFocused={currTab === 0}
+            tabIndex={0}
+            focusIndex={currTab}
             onClick={() => setCurrTab(0)}
           />
           <NavButton
             text="Collaborations"
             icon={collaborationIcon}
             focusIcon={collaborationIconFocused}
-            isFocused={currTab === 1}
+            tabIndex={1}
+            focusIndex={currTab}
             onClick={() => setCurrTab(1)}
           />
           <NavButton
             text="Game Jams"
             icon={gameJamsIcon}
             focusIcon={gameJamsIconFocused}
-            isFocused={currTab === 2}
+            tabIndex={2}
+            focusIndex={currTab}
             onClick={() => setCurrTab(2)}
           />
           <NavButton
             text="Professional Talks"
             icon={talksIcon}
             focusIcon={talksIconFocused}
-            isFocused={currTab === 3}
+            tabIndex={3}
+            focusIndex={currTab}
             onClick={() => setCurrTab(3)}
           />
         </div>
@@ -74,15 +78,19 @@ const NavButton = ({
   text,
   icon,
   focusIcon,
-  isFocused,
+  tabIndex,
+  focusIndex,
   onClick,
 }: {
   text: string;
   icon: string;
   focusIcon: string;
-  isFocused: boolean;
+  tabIndex: number;
+  focusIndex: number;
   onClick: () => void;
 }): JSX.Element => {
+  const isFocused = useMemo(() => tabIndex === focusIndex, [tabIndex, focusIndex]);
+  const isPreFocused = useMemo(() => tabIndex === focusIndex - 1, [tabIndex, focusIndex]);
   const { viewportType } = useViewportDimensions();
   const triangleWidth = useMemo(() => (viewportType === "lg" ? 40 : 20), [viewportType]);
   const triangleHeight = useMemo(() => (viewportType === "lg" ? 140 : 100), [viewportType]);
@@ -96,10 +104,15 @@ const NavButton = ({
         <div className="about-nav-button-text">{text}</div>
       </div>
       <div className={"about-nav-button-after" + (isFocused ? " about-nav-button-after-focused" : "")}>
-        <svg width={`${triangleWidth}px`} height={`${triangleHeight}px`}>
+        <svg width={triangleWidth} height={triangleHeight}>
+          <polygon
+            className={"about-nav-fill" + (isPreFocused ? " about-nav-fill-pre" : "")}
+            points={`0,0 ${triangleWidth},0 ${triangleWidth},${triangleHeight}`}
+          />
           <polygon points={`0,0 0,${triangleHeight} ${triangleWidth},${triangleHeight}`} />
           <line x1="0" y1="0" x2="100%" y2="100%" />
           <line x1="0" y1="100%" x2="100%" y2="100%" />
+          <line className="about-nav-upper-line" x1="0" y1="0" x2="100%" y2="0" />
         </svg>
       </div>
     </div>
