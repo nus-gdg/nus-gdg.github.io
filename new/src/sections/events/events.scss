@@ -1,26 +1,26 @@
 .event {
   width: 100%;
   height: 100%;
-  padding: 0.9rem 0;
+  padding-bottom: 0.9rem;
 
   @media (min-width: 640px) {
-    padding: 1.2rem;
+    padding-bottom: 1.2rem;
   }
 
   @media (min-width: 768px) {
-    padding: 1.6rem;
+    padding-bottom: 1.6rem;
   }
 
   @media (min-width: 1024px) {
-    padding: 2.2rem;
+    padding-bottom: 2.2rem;
   }
 
   @media (min-width: 1280px) {
-    padding: 2.6rem;
+    padding-bottom: 2.6rem;
   }
 
   @media (min-width: 1536px) {
-    padding: 3rem 0;
+    padding-bottom: 3rem 0;
   }
 
   &-container {
@@ -77,18 +77,18 @@
     }
 
     &-icon {
-      width: 16.5px;
+      width: 24px;
 
       @media (min-width: 640px) {
-        width: 22.5px;
+        width: 33px;
       }
 
       @media (min-width: 768px) {
-        width: 30px;
+        width: 40px;
       }
 
       @media (min-width: 1024px) {
-        width: 40px;
+        width: 38px;
       }
 
       @media (min-width: 1280px) {
@@ -131,50 +131,50 @@
       &-tagline {
         color: var(--Blue, #1471c7);
         font-family: "Red Hat Display";
-        font-size: 5px;
+        font-size: 11px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
 
         @media (min-width: 640px) {
-          font-size: 7px;
+          font-size: 16px;
         }
 
         @media (min-width: 768px) {
-          font-size: 9px;
+          font-size: 19px;
         }
 
         @media (min-width: 1024px) {
-          font-size: 12.5px;
+          font-size: 21.6px;
         }
 
         @media (min-width: 1280px) {
-          font-size: 15px;
+          font-size: 22.5px;
         }
 
         @media (min-width: 1536px) {
-          font-size: 17px;
+          font-size: 27px;
         }
       }
 
       &-heading {
         color: var(--Black, #1c1d1e);
         font-family: "Red Hat Display";
-        font-size: 12px;
+        font-size: 18px;
         font-style: normal;
         font-weight: 900;
         line-height: normal;
 
         @media (min-width: 640px) {
-          font-size: 16.5px;
+          font-size: 24px;
         }
 
         @media (min-width: 768px) {
-          font-size: 22px;
+          font-size: 33px;
         }
 
         @media (min-width: 1024px) {
-          font-size: 29px;
+          font-size: 27.6px;
         }
 
         @media (min-width: 1280px) {
@@ -190,36 +190,31 @@
 
   &-body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
 
     &-main {
-      width: 62.5%;
+      width: 100%;
+
+      @media (min-width: 1024px) {
+        width: 62.5%;
+      }
     }
 
     &-list {
-      margin-left: 0.3rem;
-      width: calc(37.5%);
+      width: 100%;
+      padding-top: 1rem;
       display: flex;
       flex-direction: column;
-      gap: 0.3rem;
+      gap: 1rem;
       justify-content: space-evenly;
 
-      @media (min-width: 640px) {
-        margin-left: 0.4rem;
-        gap: 0.4rem;
-      }
-
-      @media (min-width: 768px) {
-        margin-left: 0.6rem;
-        gap: 0.6rem;
-      }
-
       @media (min-width: 1024px) {
-        margin-left: 0.7rem;
-        gap: 0.7rem;
-      }
-
-      @media (min-width: 1280px) {
+        width: 37.5%;
+        padding-top: 0;
         margin-left: 0.9rem;
         gap: 0.9rem;
       }
