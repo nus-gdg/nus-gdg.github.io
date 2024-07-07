@@ -22,7 +22,7 @@ const Events = (): JSX.Element => {
           </div>
           <div className="event-body-list">
             {EVENTS.map((event, index) => (
-              <EventItem {...event} />
+              <EventItem key={event.name || index} {...event} />
             ))}
           </div>
         </div>
