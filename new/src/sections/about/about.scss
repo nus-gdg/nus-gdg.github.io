@@ -1,0 +1,159 @@
+.about {
+  padding: 2vw 4.7vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8vw;
+  background-color: #f8f8fa;
+  font-family: "Red Hat Display";
+
+  &-header {
+    display: flex;
+    flex-direction: row;
+
+    &-img {
+      height: 100%;
+      img {
+        height: 100%;
+      }
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+
+      &-upper {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1471c7;
+      }
+
+      &-lower {
+        font-size: 40px;
+        font-weight: 900;
+      }
+    }
+  }
+
+  &-nav {
+    display: flex;
+    flex-direction: row;
+
+    &-button {
+      display: flex;
+      flex-direction: row;
+      height: 140px;
+      max-width: 30%;
+      min-width: 25%;
+      cursor: pointer;
+
+      @media (max-width: 1024px) {
+        height: 100px;
+      }
+
+      &:first-child {
+        .about-nav-button-main {
+          border-width: 1px 0px 1px 1px;
+        }
+      }
+
+      &:last-child {
+        svg {
+          polygon.about-nav-fill {
+            display: none;
+          }
+
+          line.about-nav-upper-line {
+            display: none;
+          }
+        }
+      }
+
+      &-main {
+        padding: 20px;
+        border: solid #9fd1ff;
+        border-width: 1px 0px 1px 0px;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+        flex-grow: 1;
+        background-color: white;
+
+        @media (max-width: 768px) {
+          padding: 5px;
+        }
+
+        @media (max-width: 1024px) {
+          justify-content: center;
+          padding: 10px;
+        }
+
+        &-focused {
+          background-color: #0a2135;
+          color: white;
+        }
+      }
+
+      &-after {
+        z-index: 1;
+
+        svg {
+          line {
+            stroke: #9fd1ff;
+            stroke-width: 1.5px;
+          }
+          polygon {
+            fill: white;
+
+            &.about-nav-fill {
+              fill: white;
+
+              &-pre {
+                fill: #0a2135;
+              }
+            }
+          }
+        }
+
+        &-focused {
+          svg {
+            polygon {
+              fill: #0a2135;
+
+              &.about-nav-fill {
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+
+      &-icon {
+        img {
+          max-width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+          width: 40px;
+        }
+
+        @media (max-width: 768px) {
+          width: 30px;
+        }
+      }
+
+      &-text {
+        @media (max-width: 1024px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-sections {
+    background-color: white;
+  }
+}
