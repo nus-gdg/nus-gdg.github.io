@@ -25,6 +25,7 @@
 
       @media (min-width: 1024px) {
         width: 42vw;
+        max-width: 580px;
       }
 
       @media (max-width: 768px) {
@@ -46,6 +47,7 @@
 
       @media (min-width: 1024px) {
         width: 29vw;
+        max-width: 410px;
       }
     }
   }
@@ -63,8 +65,13 @@
       right: 3.6vw;
     }
 
+    @media (min-width: 1200px) {
+      left: 560px;
+    }
+
     img {
       width: 51.4vw;
+      max-width: 610px;
 
       @media (max-width: 1024px) {
         width: 100%;

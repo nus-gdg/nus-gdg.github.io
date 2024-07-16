@@ -1,5 +1,5 @@
 import Button from "../../components/button/button";
-import landingImage from "../../assets/images/landing-placeholder.svg";
+import landingImage from "../../assets/images/landing.svg";
 
 const Home = (): JSX.Element => {
   return (
