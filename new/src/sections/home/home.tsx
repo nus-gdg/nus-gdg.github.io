@@ -1,5 +1,5 @@
 import Button from "../../components/button/button";
-import landingImage from "../../assets/images/landing.svg";
+import landingImage from "../../assets/images/landing.png";
 import homeBgIcon1 from "../../assets/icons/home1.svg";
 import homeBgIcon2 from "../../assets/icons/home2.svg";
 import homeBgIcon3 from "../../assets/icons/home3.svg";
