@@ -1,4 +1,4 @@
-import workshopMainImage from "../../../assets/images/workshops-main.svg";
+import workshopMainImage from "../../../assets/images/about-workshops.png";
 import Button from "../../../components/button/button";
 import { NUSGDG_YOUTUBE_CHANNEL } from "../../../constants/about";
 import { WORKSHOPS } from "../../../constants/workshops";

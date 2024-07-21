@@ -1,6 +1,6 @@
-import weekFiveGameJam from "../assets/images/week5-gamejam.svg";
-import summerGameJam from "../assets/images/summer-gamejam.svg";
-import gamecraft from "../assets/images/gamecraft-gamejam.svg";
+import weekFiveGameJam from "../assets/images/about-week5-game-jam.png";
+import summerGameJam from "../assets/images/about-summer-game-jam.png";
+import gamecraft from "../assets/images/about-gamecraft.png";
 
 type GameJam = {
   image: string;
