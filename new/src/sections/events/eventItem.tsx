@@ -21,7 +21,6 @@ const EventItem = ({ name, details, description, link, icon }: Props): JSX.Eleme
           <span className="event-card-body-description">{description}</span>
           <a href={link} className="event-card-body-button" style={{ display: "inline-block" }}>
             Browse games→
-            {/* <button className="event-card-button">Browse games→</button> */}
           </a>
         </div>
         <div className="event-card-body-icon">
