@@ -1,5 +1,9 @@
 import Button from "../../components/button/button";
-import landingImage from "../../assets/images/landing-placeholder.svg";
+import landingImage from "../../assets/images/landing.png";
+import homeBgIcon1 from "../../assets/icons/home1.svg";
+import homeBgIcon2 from "../../assets/icons/home2.svg";
+import homeBgIcon3 from "../../assets/icons/home3.svg";
+import homeBgIcon4 from "../../assets/icons/home4.svg";
 
 const Home = (): JSX.Element => {
   return (
@@ -21,8 +25,22 @@ const Home = (): JSX.Element => {
             </a>
           </Button>
         </div>
-        <div className="home-banner">
-          <img src={landingImage} alt="" />
+      </div>
+      <div className="home-banner">
+        <img src={landingImage} alt="" />
+      </div>
+      <div className="home-bg-icons">
+        <div className="home-bg-icon home-bg-icon-1">
+          <img src={homeBgIcon1} alt="" />
+        </div>
+        <div className="home-bg-icon home-bg-icon-2">
+          <img src={homeBgIcon2} alt="" />
+        </div>
+        <div className="home-bg-icon home-bg-icon-3">
+          <img src={homeBgIcon3} alt="" />
+        </div>
+        <div className="home-bg-icon home-bg-icon-4">
+          <img src={homeBgIcon4} alt="" />
         </div>
       </div>
     </div>
