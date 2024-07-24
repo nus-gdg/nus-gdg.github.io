@@ -1,7 +1,7 @@
-import MainEventMainIcon from "../assets/event-icons/laptop.svg";
+import MainEventMainIcon from "../assets/event-icons/Upcoming_Gamecraft.png";
 import MainEventSideIcon from "../assets/event-icons/target.svg";
-import EventIcon1 from "../assets/event-icons/tabs-1.svg";
-import EventIcon2 from "../assets/event-icons/tabs-2.svg";
+import EventIcon1 from "../assets/event-icons/Upcoming_Events_ProjectDev.png";
+import EventIcon2 from "../assets/event-icons/Upcoming_Events_Level1Games.png";
 
 export const MAIN_EVENT = {
   name: "GameCraft! 2024",

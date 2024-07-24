@@ -1,4 +1,4 @@
-import HeaderIcon from "../../assets/icons/event-icon.svg";
+import HeaderIcon from "../../assets/event-icons/events_filled.svg";
 import { MAIN_EVENT, EVENTS } from "../../constants/events";
 import MainEventItem from "./mainEventItem";
 import EventItem from "./eventItem";
