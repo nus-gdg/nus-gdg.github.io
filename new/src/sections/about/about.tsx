@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import aboutActivityIcon from "../../assets/icons/about-activity.svg";
+import aboutActivityIcon from "../../assets/icons/activities_filled.svg";
 import workshopIcon from "../../assets/icons/activity-workshops.svg";
 import workshopIconFocused from "../../assets/icons/activity-workshops-focused.svg";
 import collaborationIcon from "../../assets/icons/activity-collaboration.svg";
