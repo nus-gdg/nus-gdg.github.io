@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.13d70ad2.css",
-    "main.js": "/static/js/main.9850e057.js",
+    "main.css": "/static/css/main.8bfb0abe.css",
+    "main.js": "/static/js/main.df9306a2.js",
     "static/media/sliggy_the_slime.webm": "/static/media/sliggy_the_slime.f49cde0702c9a0e26dc0.webm",
     "static/media/kitten_mitten_cover.png": "/static/media/kitten_mitten_cover.3e1fbc5532a32d5264e1.png",
     "static/media/the_runic_conjecture.webm": "/static/media/the_runic_conjecture.d21dc18d0bf7e617c7cd.webm",
@@ -23,7 +23,6 @@
     "static/media/bg.png": "/static/media/bg.3aaaf5011ca24ea2183a.png",
     "static/media/LeckerliOne-Regular.ttf": "/static/media/LeckerliOne-Regular.649e759d884dc21baba2.ttf",
     "static/media/sliggy_the_slime.png": "/static/media/sliggy_the_slime.44a378540113541a7ea3.png",
-    "static/media/about-activity.svg": "/static/media/about-activity.71bb8581ac6ddf897fa0a9fa5dff7a04.svg",
     "static/media/nusgdg_text.svg": "/static/media/nusgdg_text.93e8e8d56eb5d3fb505da0505d67d811.svg",
     "static/media/yt-unity-3.webp": "/static/media/yt-unity-3.0435890c73e7184d73b8.webp",
     "static/media/A2wJky66rH_cover.png": "/static/media/A2wJky66rH_cover.68f213762d094746c4a3.png",
@@ -40,6 +39,7 @@
     "static/media/yt-unity-4.webp": "/static/media/yt-unity-4.a63e950edf741f3ef789.webp",
     "static/media/home4.svg": "/static/media/home4.c3f38f8eeaa408ef28bcfb31feaff00e.svg",
     "static/media/target.svg": "/static/media/target.4a3333cc1d12283c8fc0b13aa9de3963.svg",
+    "static/media/activities_filled.svg": "/static/media/activities_filled.c4056424a52ca572413828a54decdd8d.svg",
     "static/media/activity-talks-focused.svg": "/static/media/activity-talks-focused.22cbbf4d0e378b168eb9e0b7cbf19aac.svg",
     "static/media/activity-talks.svg": "/static/media/activity-talks.ecb275f9d7b32dd4c01364803ae7cb48.svg",
     "static/media/discord_logo.svg": "/static/media/discord_logo.67c6e883191f11f30eba002533300d94.svg",
@@ -59,11 +59,11 @@
     "index.html": "/index.html",
     "static/media/hamburger-menu.svg": "/static/media/hamburger-menu.3559b40200df3914e3978bec68a844c0.svg",
     "static/media/portfolio-icon2.svg": "/static/media/portfolio-icon2.7a15827bed2eb19b96439f073463acd4.svg",
-    "main.13d70ad2.css.map": "/static/css/main.13d70ad2.css.map",
-    "main.9850e057.js.map": "/static/js/main.9850e057.js.map"
+    "main.8bfb0abe.css.map": "/static/css/main.8bfb0abe.css.map",
+    "main.df9306a2.js.map": "/static/js/main.df9306a2.js.map"
   },
   "entrypoints": [
-    "static/css/main.13d70ad2.css",
-    "static/js/main.9850e057.js"
+    "static/css/main.8bfb0abe.css",
+    "static/js/main.df9306a2.js"
   ]
 }
