@@ -1,0 +1,112 @@
+$nav-vertical-padding: 30px;
+
+.nav {
+  padding: $nav-vertical-padding 6.7vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: rgb(231, 231, 231) 1px solid;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  font-family: "Red Hat Display";
+
+  @media (max-width: 1024px) {
+    padding: $nav-vertical-padding 3vw;
+  }
+
+  &-hamburger {
+    width: 30px;
+    cursor: pointer;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &-logo {
+    width: 250px;
+  }
+
+  &-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4.68vw;
+
+    &-internal {
+      display: flex;
+      flex-direction: row;
+      gap: 4.68vw;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+
+    &-dropdown {
+      position: fixed;
+      top: 113px;
+      left: 0px;
+      width: 100vw;
+      height: 0px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: height 0.3s ease-in;
+
+      @media (min-width: 1024px) {
+        display: none;
+      }
+
+      &-apply {
+        height: 300px;
+      }
+
+      &-backdrop {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 999;
+        width: 100vw;
+        height: 0px;
+        background-color: #e8e8e87d;
+
+        @media (min-width: 1024px) {
+          display: none;
+        }
+
+        &-apply {
+          height: 100vh;
+        }
+      }
+
+      &-link {
+        padding: 15px 4vw;
+        background-color: #9eb3ff;
+        width: 100%;
+      }
+    }
+  }
+
+  &-link {
+    color: black;
+
+    :visited {
+      color: black;
+    }
+  }
+
+  &-gamecraft {
+    color: white;
+    text-decoration: none;
+
+    &-container {
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.button {
+  background-color: #1471c7;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 50vh;
+  cursor: pointer;
+  font-family: "Red Hat Display";
+
+  &:hover {
+    background-color: #105da5;
+  }
+
+  * {
+    color: white;
+  }
+}
+
+.button-discord {
+  background-color: #5865f2;
+
+  &:hover {
+    background-color: #4f5da2;
+  }
+}

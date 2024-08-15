@@ -1,0 +1,127 @@
+.event-main-card {
+  border-radius: 10px;
+  background: #dbedff;
+  padding: 3vw 1vw 1vw 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 1vw;
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+
+    &-tagline {
+      color: var(--Blue, #1471c7);
+      font-family: "Red Hat Display";
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      @media (max-width: 640px) {
+        font-size: 12px;
+      }
+    }
+
+    &-name {
+      color: var(--Black, #1c1d1e);
+      font-family: "Red Hat Display";
+      font-size: 54px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+
+      @media (max-width: 640px) {
+        font-size: 24px;
+      }
+    }
+
+    &-countdown {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &-icon {
+        height: 30px;
+
+        @media (max-width: 640px) {
+          height: 20px;
+        }
+
+        img {
+          max-height: 100%;
+        }
+      }
+
+      &-text {
+        margin-left: 0.3rem;
+        color: var(--Blue, #1471c7);
+        font-family: "Red Hat Display";
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        @media (max-width: 640px) {
+          font-size: 15px;
+        }
+
+        b {
+          font-weight: 900;
+        }
+      }
+    }
+
+    &-button {
+      border-width: 0;
+      margin-top: 1rem;
+      padding: 8px 32px;
+      border-radius: 50px;
+      background: var(--Blue, #1471c7);
+      color: var(--White-on-Black, #f8f8fe);
+      font-family: "Red Hat Display";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      width: fit-content;
+      text-decoration: none;
+
+      @media (max-width: 640px) {
+        font-size: 11.7px;
+        padding: 7.4px 29.3px;
+        margin-top: 2vw;
+      }
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: row;
+
+    &-main-icon {
+      width: 70%;
+
+      img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &-side-icon {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        object-fit: contain;
+        height: 80%;
+        width: 80%;
+      }
+    }
+  }
+}
