@@ -9,7 +9,7 @@ export const MAIN_EVENT = {
   link: "https://gamecraft.nusgdg.org/",
   mainIcon: MainEventMainIcon,
   sideIcon: MainEventSideIcon,
-  date: new Date("2024-12-09"),
+  date: new Date("2024-12-14"),
 };
 
 export const EVENTS = [
