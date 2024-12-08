@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8bfb0abe.css",
-    "main.js": "/static/js/main.df9306a2.js",
+    "main.js": "/static/js/main.625392d5.js",
     "static/media/sliggy_the_slime.webm": "/static/media/sliggy_the_slime.f49cde0702c9a0e26dc0.webm",
     "static/media/kitten_mitten_cover.png": "/static/media/kitten_mitten_cover.3e1fbc5532a32d5264e1.png",
     "static/media/the_runic_conjecture.webm": "/static/media/the_runic_conjecture.d21dc18d0bf7e617c7cd.webm",
@@ -60,10 +60,10 @@
     "static/media/hamburger-menu.svg": "/static/media/hamburger-menu.3559b40200df3914e3978bec68a844c0.svg",
     "static/media/portfolio-icon2.svg": "/static/media/portfolio-icon2.7a15827bed2eb19b96439f073463acd4.svg",
     "main.8bfb0abe.css.map": "/static/css/main.8bfb0abe.css.map",
-    "main.df9306a2.js.map": "/static/js/main.df9306a2.js.map"
+    "main.625392d5.js.map": "/static/js/main.625392d5.js.map"
   },
   "entrypoints": [
     "static/css/main.8bfb0abe.css",
-    "static/js/main.df9306a2.js"
+    "static/js/main.625392d5.js"
   ]
 }
