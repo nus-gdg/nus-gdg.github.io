@@ -6,6 +6,7 @@ import Contact from "./sections/contact/contact";
 import Home from "./sections/home/home";
 import Portfolio from "./sections/portfolio/portfolio";
 import Events from "./sections/events/events";
+import Timeline from "./sections/timeline/timeline";
 
 const App = (): JSX.Element => {
   return (
@@ -13,6 +14,7 @@ const App = (): JSX.Element => {
       <Nav />
       <Home />
       <About />
+      <Timeline />
       <Portfolio />
       <Events />
       <Contact />
