@@ -24,7 +24,7 @@ export type WeekItem = {
     | {
         name: string;
         updatedTime?: TimeData;
-        updatedVenue?: TimeData;
+        updatedVenue?: Venue;
       }
     | NoSessionReason;
   poster?: string;
