@@ -11,6 +11,11 @@ export type TimeData = {
   time: string;
 };
 
+export type Venue = {
+  godot: string;
+  unity: string;
+};
+
 export type NoSessionReason = string;
 
 export type WeekItem = {
@@ -18,6 +23,8 @@ export type WeekItem = {
   mainActivity?:
     | {
         name: string;
+        updatedTime?: TimeData;
+        updatedVenue?: TimeData;
       }
     | NoSessionReason;
   poster?: string;
@@ -30,24 +37,21 @@ export type WeekItem = {
 
 export type TimelineData = {
   mondayWeek1: Date;
-  regularSessionTime: {
+  regularSession: {
     time: TimeData;
-    venues: {
-      godot: string;
-      unity: string;
-    };
+    venue: Venue;
   };
   weeks: WeekItem[];
 };
 
 export const TIMELINE: TimelineData = {
   mondayWeek1: new Date("2025-01-13"),
-  regularSessionTime: {
+  regularSession: {
     time: {
       dayOfWeek: "Thursday",
       time: "7.30pm",
     },
-    venues: {
+    venue: {
       godot: "COM3-01-20",
       unity: "COM3-01-21",
     },
