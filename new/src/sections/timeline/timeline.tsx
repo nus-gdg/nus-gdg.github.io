@@ -1,4 +1,5 @@
 import timelineIcon from "../../assets/icons/timeline.png";
+import TimelineRightSection from "./timelineRightSection";
 
 const Timeline = (): JSX.Element => {
   return (
@@ -20,7 +21,11 @@ const Timeline = (): JSX.Element => {
         </div>
         <div>Timeline here!</div>
       </div>
-      <div className="timeline-right">Right side here!</div>
+      <div className="timeline-right">
+        <TimelineRightSection
+          weekIndex={7}
+        />
+      </div>
     </div>
   );
 };
