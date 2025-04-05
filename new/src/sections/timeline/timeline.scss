@@ -9,6 +9,11 @@
   @media (max-width: 1024px) {
     flex-direction: column;
     gap: 30px;
+    
+  .timeline-left,
+  .timeline-right {
+    width: 95%;
+  }
   }
 
   * {
