@@ -1,5 +1,9 @@
 .tl-right {
-    background-color: aqua;
+    background-color: #DBEDFF;
+    border-radius: 3rem;
+    background-image: url("../../assets/icons/timeline-clock.svg");
+    background-repeat: no-repeat;
+    background-position: 115% -20%;
     padding: 3%;
     display: flex;
     flex-direction: column;
@@ -14,8 +18,8 @@
       align-items: center;
       gap: 0.8rem;
     }
-    &-title > p {
-      color: blue;
+    &-title > strong {
+      color: #005CB2;
     }
   
     &-mainactivity {
@@ -25,13 +29,19 @@
       flex-direction: column;
     }
   
-    &-mainactivity-heading {
+    &-heading {
       margin-top: 0rem;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
       gap: 2%;
+    }
+    &-time {
+        border: 2px solid #005CB2;
+        border-radius: 0.3rem;
+        padding: 0.5%;
+        color: #005CB2;
     }
     &-mainactivity-content {
         margin-top: 0px;
@@ -43,11 +53,11 @@
         width: 50%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-content: flex-start;
     }
     &-poster {
         width: 50%;
         object-fit: cover;
-        }
+    }
   }
   

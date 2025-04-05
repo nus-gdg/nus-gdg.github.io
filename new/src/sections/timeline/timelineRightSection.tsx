@@ -13,32 +13,31 @@ const TimelineRightSection = ({weekIndex}: Props): JSX.Element => {
         <div className = "tl-right">
             <span className = "tl-right-title">
                 <h1>This week</h1>
-                <p>Week {this_week}</p>
+                <strong>(Week {this_week})</strong>
             </span>
             {currentWeekItem.mainActivity && typeof currentWeekItem.mainActivity === "object" ? (
             <div className = "tl-right-mainactivity">
-                <div className = "tl-right-mainactivity-heading">
+                <div className = "tl-right-heading">
                     <h3>Regular session:</h3>
                     <span>{currentWeekItem.mainActivity.name}</span>
+                    {currentWeekItem.mainActivity.updatedTime ? (
+                        <strong className = "tl-right-time">
+                           {currentWeekItem.mainActivity.updatedTime.dayOfWeek} at{" "}
+                            {currentWeekItem.mainActivity.updatedTime.time}
+                        </strong>
+                        ) : (
+                        TIMELINE.regularSession.time && (
+                            <strong className = "tl-right-time"> {TIMELINE.regularSession.time.dayOfWeek}:{" "}
+                            {TIMELINE.regularSession.time.time}
+                            </strong>
+                        )
+                        )}
                 </div>
                 <div className = "tl-right-mainactivity-content">
                     {currentWeekItem.poster && (
                         <img className="tl-right-poster" src={currentWeekItem.poster} alt="Event poster"  />
                     )}
                     <div className = "tl-right-mainactivity-info">
-                        {currentWeekItem.mainActivity.updatedTime ? (
-                        <p>
-                            <strong>Time:</strong> {currentWeekItem.mainActivity.updatedTime.dayOfWeek} at{" "}
-                            {currentWeekItem.mainActivity.updatedTime.time}
-                        </p>
-                        ) : (
-                        TIMELINE.regularSession.time && (
-                            <p>
-                            <strong>Time:</strong> {TIMELINE.regularSession.time.dayOfWeek} at{" "}
-                            {TIMELINE.regularSession.time.time}
-                            </p>
-                        )
-                        )}
                         {currentWeekItem.mainActivity.updatedVenue ? (
                         <p>
                             <strong>Venue (Godot):</strong> {currentWeekItem.mainActivity.updatedVenue.godot} <br />
@@ -67,12 +66,14 @@ const TimelineRightSection = ({weekIndex}: Props): JSX.Element => {
 
         {currentWeekItem.specialActivity && (
             <div>
-            <h3 className="font-semibold">Special Activity:</h3>
-            <p>{currentWeekItem.specialActivity.name}</p>
-            <p>
-                <strong>Time:</strong> {currentWeekItem.specialActivity.time.dayOfWeek} at{" "}
-                {currentWeekItem.specialActivity.time.time}
-            </p>
+                <div className="tl-right-heading">
+                    <h3 className="font-semibold">Special Activity:</h3>
+                    <span>{currentWeekItem.specialActivity.name}</span>
+                    <strong className = "tl-right-time">
+                        {currentWeekItem.specialActivity.time.dayOfWeek}: {" "}
+                        {currentWeekItem.specialActivity.time.time}
+                    </strong>
+                </div>
             <p>
                 <strong>Venue:</strong> {currentWeekItem.specialActivity.venue}
             </p>
