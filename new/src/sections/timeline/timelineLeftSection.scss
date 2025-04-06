@@ -18,77 +18,75 @@
 }
 
 .timeline-base-circle {
-  &-unhovered {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    &-text {
-      color: white;
-      font-weight: 700;
-      font-size: 14px;
+  &-past {
+    background-color: #5b5b5b;
+
+    &:hover {
+      width: 70px;
+      height: 70px;
+      background-color: #3a3a3a;
+      position: absolute;
     }
 
-    &-past {
-      background-color: #5b5b5b;
-    }
-
-    &-current {
-      background-color: #1471c7;
-      scale: 1.5;
-    }
-
-    &-future {
-      background-color: #003669;
+    &-icon {
+      position: absolute;
+      max-width: 60px;
     }
   }
 
-  &-hovered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &-current {
+    background-color: #1471c7;
+    scale: 1.4;
 
-    &-text {
-      color: white;
-      font-weight: 700;
-      font-size: 12px;
-    }
-
-    &-past-icon {
+    &:hover {
+      scale: 1;
       position: absolute;
-      top: -3px;
-      left: -3px;
-      max-width: 70px;
-    }
-
-    &-current {
-      position: absolute;
-      top: -15px;
-      left: -20px;
-      background-color: #1471c7;
+      top: -5px;
+      left: -10px;
+      background-color: #00396d;
       min-width: 100px;
       min-height: 80px;
       border-radius: 20px;
       padding: 10px;
     }
+  }
 
-    &-future {
+  &-future {
+    background-color: #003669;
+
+    &:hover {
       position: absolute;
-      top: -15px;
-      left: -20px;
-      background-color: #003669;
+      top: -5px;
+      left: -10px;
+      background-color: #002239;
       min-width: 100px;
       min-height: 80px;
       border-radius: 20px;
       padding: 10px;
     }
+  }
+
+  &-unhovered-text {
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  &-hovered-text {
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
   }
 }
 
 div {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }

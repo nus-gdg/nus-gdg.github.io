@@ -19,7 +19,7 @@ interface TimelineLeftSectionProps {
 }
 
 const TimelineBaseCircle = ({ thisWeekIndex, circleIndex }: TimelineBaseCircleProps): JSX.Element => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   const isPast = thisWeekIndex > circleIndex;
   const isCurrent = thisWeekIndex === circleIndex;
@@ -41,33 +41,31 @@ const TimelineBaseCircle = ({ thisWeekIndex, circleIndex }: TimelineBaseCirclePr
     <div
       className={`timeline-base-circle-container`}
       style={{ position: "absolute", left: `${dx}px`, top: `${dy}px` }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      {!isHovered && (
-        <div
-          className={`timeline-base-circle-unhovered timeline-base-circle-unhovered-${isPast ? "past" : isCurrent ? "current" : "future"}`}
-        >
-          <div className="timeline-base-circle-unhovered-text">Week {`${circleIndex + 1}`}</div>
+      {isPast && (
+        <div className={"timeline-base-circle timeline-base-circle-past"}>
+          {!hovered && <div className="timeline-base-circle-unhovered-text">Week {`${circleIndex + 1}`}</div>}
+          {hovered && (
+            <img
+              src={TimelinePastEventIcon}
+              alt="timeline-past-event-icon"
+              className="timeline-base-circle-past-icon"
+            />
+          )}
         </div>
       )}
-      {isHovered && isPast && (
-        <div className="timeline-base-circle-hovered timeline-base-circle-hovered-past">
-          <img
-            src={TimelinePastEventIcon}
-            alt="timeline-past-event-icon"
-            className="timeline-base-circle-hovered-past-icon"
-          />
-        </div>
-      )}
-      {isHovered && !isPast && (
-        <div
-          className={`timeline-base-circle-hovered timeline-base-circle-hovered-${isCurrent ? "current" : "future"}`}
-        >
-          <div className="timeline-base-circle-hovered-text">
-            {mainActivityName && <li>{mainActivityName}</li>}
-            {specialActivityName && <li>{specialActivityName}</li>}
-          </div>
+
+      {!isPast && (
+        <div className={`timeline-base-circle timeline-base-circle-${isCurrent ? "current" : "future"}`}>
+          {!hovered && <div className="timeline-base-circle-unhovered-text">Week {`${circleIndex + 1}`}</div>}
+          {hovered && (
+            <div className="timeline-base-circle-hovered-text">
+              {mainActivityName && <li>{mainActivityName}</li>}
+              {specialActivityName && <li>{specialActivityName}</li>}
+            </div>
+          )}
         </div>
       )}
     </div>
