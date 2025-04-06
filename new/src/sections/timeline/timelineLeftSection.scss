@@ -1,0 +1,94 @@
+.timeline-left-section {
+  &-content {
+    position: relative;
+    min-height: 50vh;
+  }
+
+  &-background-line {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+  }
+
+  &-circles {
+    position: absolute;
+    left: 100px;
+    top: 0px;
+  }
+}
+
+.timeline-base-circle {
+  &-unhovered {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-text {
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    &-past {
+      background-color: #5b5b5b;
+    }
+
+    &-current {
+      background-color: #1471c7;
+      scale: 1.5;
+    }
+
+    &-future {
+      background-color: #003669;
+    }
+  }
+
+  &-hovered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-text {
+      color: white;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    &-past-icon {
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      max-width: 70px;
+    }
+
+    &-current {
+      position: absolute;
+      top: -15px;
+      left: -20px;
+      background-color: #1471c7;
+      min-width: 100px;
+      min-height: 80px;
+      border-radius: 20px;
+      padding: 10px;
+    }
+
+    &-future {
+      position: absolute;
+      top: -15px;
+      left: -20px;
+      background-color: #003669;
+      min-width: 100px;
+      min-height: 80px;
+      border-radius: 20px;
+      padding: 10px;
+    }
+  }
+}
+
+div {
+  transition: all 0.3s ease-in-out;
+}
