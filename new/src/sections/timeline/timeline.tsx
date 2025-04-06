@@ -1,4 +1,14 @@
 import timelineIcon from "../../assets/icons/timeline.png";
+import TimelineRightSection from "./timelineRightSection";
+import { TIMELINE } from "../../constants/timeline";
+
+const thisWeekIndex = (): number => {
+  const today = new Date();
+  const diffInMs = today.getTime() - TIMELINE.mondayWeek1.getTime();
+  const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+  const weekIndex = Math.floor(diffInDays / 7);
+  return weekIndex - 1;
+};
 
 const Timeline = (): JSX.Element => {
   return (
@@ -20,7 +30,9 @@ const Timeline = (): JSX.Element => {
         </div>
         <div>Timeline here!</div>
       </div>
-      <div className="timeline-right">Right side here!</div>
+      <div className="timeline-right">
+        <TimelineRightSection weekIndex={thisWeekIndex()} />
+      </div>
     </div>
   );
 };
