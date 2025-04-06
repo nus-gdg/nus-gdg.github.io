@@ -1,6 +1,12 @@
 import timelineIcon from "../../assets/icons/timeline.png";
+import TimelineLeftSection from "./timelineLeftSection";
+
+// TODO: replace with actual implementation in the other PR
+const thisWeekIndexPlaceholder = () => 12 - 1;
 
 const Timeline = (): JSX.Element => {
+  const thisWeekIndex = thisWeekIndexPlaceholder();
+
   return (
     <div className="timeline">
       <div className="timeline-left">
@@ -18,7 +24,9 @@ const Timeline = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <div>Timeline here!</div>
+        <div>
+          <TimelineLeftSection weekIndex={thisWeekIndex} />
+        </div>
       </div>
       <div className="timeline-right">Right side here!</div>
     </div>
