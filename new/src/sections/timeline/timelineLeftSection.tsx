@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 import { TIMELINE } from "../../constants/timeline";
 import TimelinePastEventIcon from "../../assets/icons/timeline-past-event.png";
 import TimelineBackgroundLineShape from "../../assets/icons/timeline-background-line.svg";
-import "./timelineLeftSection.scss";
 
 const TIMELINE_BASE_CIRCLE_X_GAP = 150;
 const TIMELINE_BASE_CIRCLE_Y_GAP = 116;
@@ -23,19 +22,47 @@ const TimelineBaseCircle = ({ thisWeekIndex, circleIndex }: TimelineBaseCirclePr
 
   const isPast = thisWeekIndex > circleIndex;
   const isCurrent = thisWeekIndex === circleIndex;
-  let dx =
-    circleIndex % 8 < 4
+
+  const dx = useMemo(() => {
+    return circleIndex % 8 < 4
       ? (circleIndex % 4) * TIMELINE_BASE_CIRCLE_X_GAP
       : (3 - (circleIndex % 4)) * TIMELINE_BASE_CIRCLE_X_GAP + TIMELINE_EVEN_NUMBER_ROW_DISPLACEMENT;
-  let dy = Math.floor(circleIndex / 4) * TIMELINE_BASE_CIRCLE_Y_GAP;
+  }, [circleIndex]);
 
-  if (circleIndex < 4 || circleIndex > 11) {
-    dy += 8; // slight adjustment due to line having unequal gap
-  }
+  const dy = useMemo(() => {
+    let ret = Math.floor(circleIndex / 4) * TIMELINE_BASE_CIRCLE_Y_GAP;
+    if (circleIndex < 4 || circleIndex > 11 ? 8 : 0) {
+      ret += 8; // slight adjustment due to line having unequal gap
+    }
+    return ret;
+  }, [circleIndex]);
 
   const mainActivity = TIMELINE.weeks[circleIndex].mainActivity;
   const mainActivityName = typeof mainActivity === "string" ? mainActivity : mainActivity?.name;
   const specialActivityName = TIMELINE.weeks[circleIndex].specialActivity?.name;
+
+  const pastUnhoveredCircle = useMemo(() => {
+    return <div className="timeline-base-circle-unhovered-text">Week {`${circleIndex + 1}`}</div>;
+  }, [circleIndex]);
+
+  const pastHoveredCircle = useMemo(() => {
+    return (
+      <img src={TimelinePastEventIcon} alt="timeline-past-event-icon" className="timeline-base-circle-past-icon" />
+    );
+  }, []);
+
+  const nonPastUnhoveredCircle = useMemo(() => {
+    return <div className="timeline-base-circle-unhovered-text">Week {`${circleIndex + 1}`}</div>;
+  }, [circleIndex]);
+
+  const nonPastHoveredCircle = useMemo(() => {
+    return (
+      <div className="timeline-base-circle-hovered-text">
+        {mainActivityName && <li>{mainActivityName}</li>}
+        {specialActivityName && <li>{specialActivityName}</li>}
+      </div>
+    );
+  }, [mainActivityName, specialActivityName]);
 
   return (
     <div
@@ -46,26 +73,15 @@ const TimelineBaseCircle = ({ thisWeekIndex, circleIndex }: TimelineBaseCirclePr
     >
       {isPast && (
         <div className={"timeline-base-circle timeline-base-circle-past"}>
-          {!hovered && <div className="timeline-base-circle-unhovered-text">Week {`${circleIndex + 1}`}</div>}
-          {hovered && (
-            <img
-              src={TimelinePastEventIcon}
-              alt="timeline-past-event-icon"
-              className="timeline-base-circle-past-icon"
-            />
-          )}
+          {!hovered && pastUnhoveredCircle}
+          {hovered && pastHoveredCircle}
         </div>
       )}
 
       {!isPast && (
         <div className={`timeline-base-circle timeline-base-circle-${isCurrent ? "current" : "future"}`}>
-          {!hovered && <div className="timeline-base-circle-unhovered-text">Week {`${circleIndex + 1}`}</div>}
-          {hovered && (
-            <div className="timeline-base-circle-hovered-text">
-              {mainActivityName && <li>{mainActivityName}</li>}
-              {specialActivityName && <li>{specialActivityName}</li>}
-            </div>
-          )}
+          {!hovered && nonPastUnhoveredCircle}
+          {hovered && nonPastHoveredCircle}
         </div>
       )}
     </div>
