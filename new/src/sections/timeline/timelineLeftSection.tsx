@@ -40,7 +40,7 @@ const TimelineBaseCircle = ({ thisWeekIndex, circleIndex }: TimelineBaseCirclePr
   return (
     <div
       className={`timeline-base-circle-container`}
-      style={{ position: "absolute", left: `${dx}px`, top: `${dy}px` }}
+      style={{ position: "absolute", left: `${dx}px`, top: `${dy}px`, borderRadius: "50%" }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
