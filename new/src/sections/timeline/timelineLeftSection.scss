@@ -1,0 +1,92 @@
+.timeline-left-section {
+  &-content {
+    position: relative;
+    min-height: 425px;
+  }
+
+  &-background-line {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+  }
+
+  &-circles {
+    position: absolute;
+    left: 100px;
+    top: 0px;
+  }
+}
+
+.timeline-base-circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-past {
+    background-color: #5b5b5b;
+
+    &:hover {
+      width: 70px;
+      height: 70px;
+      background-color: #3a3a3a;
+      position: absolute;
+    }
+
+    &-icon {
+      position: absolute;
+      max-width: 60px;
+    }
+  }
+
+  &-current {
+    background-color: #1471c7;
+    scale: 1.4;
+
+    &:hover {
+      scale: 1;
+      position: absolute;
+      top: -5px;
+      left: -10px;
+      background-color: #00396d;
+      min-width: 100px;
+      min-height: 80px;
+      border-radius: 20px;
+      padding: 10px;
+    }
+  }
+
+  &-future {
+    background-color: #003669;
+
+    &:hover {
+      position: absolute;
+      top: -5px;
+      left: -10px;
+      background-color: #002239;
+      min-width: 100px;
+      min-height: 80px;
+      border-radius: 20px;
+      padding: 10px;
+    }
+  }
+
+  &-unhovered-text {
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  &-hovered-text {
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+  }
+}
+
+div {
+  transition: all 0.5s ease-in-out;
+}
