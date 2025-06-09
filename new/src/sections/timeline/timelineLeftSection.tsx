@@ -5,8 +5,9 @@ import TimelinePastEventIcon from "../../assets/icons/timeline-past-event.png";
 import TimelineBackgroundLineShape from "../../assets/icons/timeline-background-line.svg";
 
 const TIMELINE_BASE_CIRCLE_X_GAP = 150;
-const TIMELINE_BASE_CIRCLE_Y_GAP = 116;
-const TIMELINE_EVEN_NUMBER_ROW_DISPLACEMENT = -20;
+const TIMELINE_EVEN_NUMBER_ROW_X_DISPLACEMENT = -20;
+const TIMELINE_BASE_CIRCLE_Y_OFFSET = 10;
+const TIMELINE_BASE_CIRCLE_Y_GAP = 107;
 
 interface TimelineBaseCircleProps {
   thisWeekIndex: number;
@@ -26,15 +27,11 @@ const TimelineBaseCircle = ({ thisWeekIndex, circleIndex }: TimelineBaseCirclePr
   const dx = useMemo(() => {
     return circleIndex % 8 < 4
       ? (circleIndex % 4) * TIMELINE_BASE_CIRCLE_X_GAP
-      : (3 - (circleIndex % 4)) * TIMELINE_BASE_CIRCLE_X_GAP + TIMELINE_EVEN_NUMBER_ROW_DISPLACEMENT;
+      : (3 - (circleIndex % 4)) * TIMELINE_BASE_CIRCLE_X_GAP + TIMELINE_EVEN_NUMBER_ROW_X_DISPLACEMENT;
   }, [circleIndex]);
 
   const dy = useMemo(() => {
-    let ret = Math.floor(circleIndex / 4) * TIMELINE_BASE_CIRCLE_Y_GAP;
-    if (circleIndex < 4 || circleIndex > 11 ? 8 : 0) {
-      ret += 8; // slight adjustment due to line having unequal gap
-    }
-    return ret;
+    return TIMELINE_BASE_CIRCLE_Y_OFFSET + Math.floor(circleIndex / 4) * TIMELINE_BASE_CIRCLE_Y_GAP;
   }, [circleIndex]);
 
   const mainActivity = TIMELINE.weeks[circleIndex].mainActivity;
