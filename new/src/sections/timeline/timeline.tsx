@@ -2,7 +2,7 @@ import timelineIcon from "../../assets/icons/timeline.png";
 import TimelineRightSection from "./timelineRightSection";
 import { TIMELINE } from "../../constants/timeline_2526s1";
 
-const testWeekNumber = 9
+const testWeekNumber = 9;
 const thisWeekIndex = (): number => {
   const today = new Date();
   const diffInMs = today.getTime() - TIMELINE.mondayWeek1.getTime();
@@ -13,7 +13,6 @@ const thisWeekIndex = (): number => {
   // const testWeekIndex = testWeekNumber - 1; // for testing purposes
   // return testWeekIndex;
 };
-
 
 const Timeline = (): JSX.Element => {
   return (

@@ -17,7 +17,7 @@ const TimelineRightSection = ({ weekIndex }: Props): JSX.Element => {
     );
   }
   const currentWeekItem = TIMELINE.weeks[weekIndex];
-  const currentWeekNumber = weekIndex + 1; 
+  const currentWeekNumber = weekIndex + 1;
   return (
     <div className="tl-right">
       <span className="tl-right-title">
