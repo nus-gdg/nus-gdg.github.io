@@ -1,18 +1,28 @@
-import { TIMELINE } from "../../constants/timeline";
-import "./timelineRightSection.scss";
+import { TIMELINE } from "../../constants/timeline_2526s1";
 
 interface Props {
   weekIndex: number;
 }
 
 const TimelineRightSection = ({ weekIndex }: Props): JSX.Element => {
-  const this_week = weekIndex + 1;
+  if (weekIndex < 0 || weekIndex >= TIMELINE.weeks.length) {
+    return (
+      <div className="tl-right">
+        <span className="tl-right-title">
+          <h1>This week</h1>
+          <strong>(No ongoing week)</strong>
+        </span>
+        <p>There is no school at the moment. Please check back later during the semester for exciting stuff!</p>
+      </div>
+    );
+  }
   const currentWeekItem = TIMELINE.weeks[weekIndex];
+  const currentWeekNumber = weekIndex + 1; 
   return (
     <div className="tl-right">
       <span className="tl-right-title">
         <h1>This week</h1>
-        <strong>(Week {this_week})</strong>
+        <strong>(Week {currentWeekNumber})</strong>
       </span>
       {currentWeekItem.mainActivity && typeof currentWeekItem.mainActivity === "object" ? (
         <div className="tl-right-mainactivity">
