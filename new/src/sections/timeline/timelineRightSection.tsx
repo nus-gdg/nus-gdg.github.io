@@ -53,13 +53,21 @@ const TimelineRightSection = ({ weekIndex }: Props): JSX.Element => {
             <div className="tl-right-mainactivity-info">
               {currentWeekItem.mainActivity.updatedVenue ? (
                 <p>
-                  <strong>Venue (Godot):</strong> {currentWeekItem.mainActivity.updatedVenue.godot} <br />
+                  {currentWeekItem.mainActivity.updatedVenue.godot && (
+                    <>
+                      <strong>Venue (Godot):</strong> {currentWeekItem.mainActivity.updatedVenue.godot} <br />
+                    </>
+                  )}
                   <strong>Venue (Unity):</strong> {currentWeekItem.mainActivity.updatedVenue.unity}
                 </p>
               ) : (
                 TIMELINE.regularSession.venue && (
                   <p>
-                    <strong>Venue (Godot):</strong> {TIMELINE.regularSession.venue.godot} <br />
+                    {TIMELINE.regularSession.venue.godot && (
+                      <>
+                        <strong>Venue (Godot):</strong> {TIMELINE.regularSession.venue.godot} <br />
+                      </>
+                    )}
                     <strong>Venue (Unity):</strong> {TIMELINE.regularSession.venue.unity}
                   </p>
                 )

@@ -12,7 +12,7 @@ export type TimeData = {
 };
 
 export type Venue = {
-  godot: string;
+  godot?: string;
   unity: string;
 };
 
@@ -52,7 +52,6 @@ export const TIMELINE: TimelineData = {
       time: "7.30pm",
     },
     venue: {
-      godot: "COM3-01-20",
       unity: "COM3-01-21",
     },
   },
