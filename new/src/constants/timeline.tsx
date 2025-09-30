@@ -45,7 +45,7 @@ export type TimelineData = {
 };
 
 export const TIMELINE: TimelineData = {
-  mondayWeek1: new Date("2025-01-13"),
+  mondayWeek1: new Date("2025-08-11"),
   regularSession: {
     time: {
       dayOfWeek: "Thursday",
@@ -85,6 +85,9 @@ export const TIMELINE: TimelineData = {
         name: "Game AI",
       },
       poster: s2w6,
+    },
+    {
+      mainActivity: "Recess week",
     },
     {
       mainActivity: "Midterm Exams",

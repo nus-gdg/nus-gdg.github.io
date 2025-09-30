@@ -1,10 +1,16 @@
-import { TIMELINE } from "../../constants/timeline_2526s1";
+import { useMemo } from "react";
+import { TIMELINE } from "../../constants/timeline";
 
 interface Props {
   weekIndex: number;
 }
 
 const TimelineRightSection = ({ weekIndex }: Props): JSX.Element => {
+  const currentWeekItem = useMemo(() => TIMELINE.weeks[weekIndex], [weekIndex]);
+  const currentWeekName = useMemo(
+    () => (weekIndex === 6 ? "Recess week" : weekIndex < 6 ? `Week ${weekIndex + 1}` : `Week ${weekIndex}`),
+    [weekIndex],
+  );
   if (weekIndex < 0 || weekIndex >= TIMELINE.weeks.length) {
     return (
       <div className="tl-right">
@@ -16,13 +22,11 @@ const TimelineRightSection = ({ weekIndex }: Props): JSX.Element => {
       </div>
     );
   }
-  const currentWeekItem = TIMELINE.weeks[weekIndex];
-  const currentWeekNumber = weekIndex + 1;
   return (
     <div className="tl-right">
       <span className="tl-right-title">
         <h1>This week</h1>
-        <strong>(Week {currentWeekNumber})</strong>
+        <strong>({currentWeekName})</strong>
       </span>
       {currentWeekItem.mainActivity && typeof currentWeekItem.mainActivity === "object" ? (
         <div className="tl-right-mainactivity">
@@ -67,7 +71,7 @@ const TimelineRightSection = ({ weekIndex }: Props): JSX.Element => {
         // If mainActivity is just a string (like "Midterm Exams")
         typeof currentWeekItem.mainActivity === "string" && (
           <div>
-            <h3 className="font-semibold">Main Activity:</h3>
+            <h3 className="font-semibold">No session this week!</h3>
             <p>{currentWeekItem.mainActivity}</p>
           </div>
         )
