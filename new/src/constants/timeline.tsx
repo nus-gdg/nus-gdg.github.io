@@ -12,7 +12,7 @@ export type TimeData = {
 };
 
 export type Venue = {
-  godot: string;
+  godot?: string;
   unity: string;
 };
 
@@ -45,14 +45,13 @@ export type TimelineData = {
 };
 
 export const TIMELINE: TimelineData = {
-  mondayWeek1: new Date("2025-01-13"),
+  mondayWeek1: new Date("2025-08-11"),
   regularSession: {
     time: {
       dayOfWeek: "Thursday",
       time: "7.30pm",
     },
     venue: {
-      godot: "COM3-01-20",
       unity: "COM3-01-21",
     },
   },
@@ -85,6 +84,9 @@ export const TIMELINE: TimelineData = {
         name: "Game AI",
       },
       poster: s2w6,
+    },
+    {
+      mainActivity: "Recess week",
     },
     {
       mainActivity: "Midterm Exams",
