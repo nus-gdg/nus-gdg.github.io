@@ -1,11 +1,19 @@
 import timelineIcon from "../../assets/icons/timeline.png";
 import TimelineLeftSection from "./timelineLeftSection";
+import TimelineRightSection from "./timelineRightSection";
+import { TIMELINE } from "../../constants/timeline";
 
-// TODO: replace with actual implementation in the other PR
-const thisWeekIndexPlaceholder = () => 12 - 1;
+const thisWeekIndex = (): number => {
+  const today = new Date();
+  const diffInMs = today.getTime() - TIMELINE.mondayWeek1.getTime();
+  const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+  const weekNumber = Math.floor(diffInDays / 7);
+  const weekIndex = weekNumber;
+  return weekIndex;
+};
 
 const Timeline = (): JSX.Element => {
-  const thisWeekIndex = thisWeekIndexPlaceholder();
+  const weekIndex = thisWeekIndex();
 
   return (
     <div className="timeline">
@@ -25,10 +33,12 @@ const Timeline = (): JSX.Element => {
           </div>
         </div>
         <div>
-          <TimelineLeftSection weekIndex={thisWeekIndex} />
+          <TimelineLeftSection weekIndex={weekIndex} />
         </div>
       </div>
-      <div className="timeline-right">Right side here!</div>
+      <div className="timeline-right">
+        <TimelineRightSection weekIndex={weekIndex} />
+      </div>
     </div>
   );
 };
