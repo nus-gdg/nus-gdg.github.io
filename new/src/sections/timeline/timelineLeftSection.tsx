@@ -10,7 +10,7 @@ const TIMELINE_BASE_CIRCLE_Y_OFFSET = 10;
 const TIMELINE_BASE_CIRCLE_Y_GAP = 107;
 
 interface TimelineBaseCircleProps {
-  thisWeekIndex: number;
+  currentWeekNumber: number;
   circleIndex: number;
 }
 
@@ -18,11 +18,12 @@ interface TimelineLeftSectionProps {
   weekIndex: number;
 }
 
-const TimelineBaseCircle = ({ thisWeekIndex, circleIndex }: TimelineBaseCircleProps): JSX.Element => {
+const TimelineBaseCircle = ({ currentWeekNumber, circleIndex }: TimelineBaseCircleProps): JSX.Element => {
   const [hovered, setHovered] = useState(false);
 
-  const isPast = thisWeekIndex > circleIndex;
-  const isCurrent = thisWeekIndex === circleIndex;
+  const circleWeekNumber = circleIndex + 1;
+  const isPast = currentWeekNumber > circleWeekNumber;
+  const isCurrent = currentWeekNumber === circleWeekNumber;
 
   const dx = useMemo(() => {
     return circleIndex % 8 < 4
@@ -34,12 +35,13 @@ const TimelineBaseCircle = ({ thisWeekIndex, circleIndex }: TimelineBaseCirclePr
     return TIMELINE_BASE_CIRCLE_Y_OFFSET + Math.floor(circleIndex / 4) * TIMELINE_BASE_CIRCLE_Y_GAP;
   }, [circleIndex]);
 
-  const mainActivity = TIMELINE.weeks[circleIndex].mainActivity;
+  const circleTimelineIndex = circleIndex < 6 ? circleIndex : circleIndex + 1; // the circle's timeline item index, skipping recess week
+  const mainActivity = TIMELINE.weeks[circleTimelineIndex].mainActivity;
   const mainActivityName = typeof mainActivity === "string" ? mainActivity : mainActivity?.name;
-  const specialActivityName = TIMELINE.weeks[circleIndex].specialActivity?.name;
+  const specialActivityName = TIMELINE.weeks[circleTimelineIndex].specialActivity?.name;
 
   const pastUnhoveredCircle = useMemo(() => {
-    return <div className="timeline-base-circle-unhovered-text">Week {`${circleIndex + 1}`}</div>;
+    return <div className="timeline-base-circle-unhovered-text">Week {`${circleWeekNumber}`}</div>;
   }, [circleIndex]);
 
   const pastHoveredCircle = useMemo(() => {
@@ -49,7 +51,7 @@ const TimelineBaseCircle = ({ thisWeekIndex, circleIndex }: TimelineBaseCirclePr
   }, []);
 
   const nonPastUnhoveredCircle = useMemo(() => {
-    return <div className="timeline-base-circle-unhovered-text">Week {`${circleIndex + 1}`}</div>;
+    return <div className="timeline-base-circle-unhovered-text">Week {`${circleWeekNumber}`}</div>;
   }, [circleIndex]);
 
   const nonPastHoveredCircle = useMemo(() => {
@@ -86,6 +88,7 @@ const TimelineBaseCircle = ({ thisWeekIndex, circleIndex }: TimelineBaseCirclePr
 };
 
 const TimelineLeftSection = ({ weekIndex }: TimelineLeftSectionProps): JSX.Element => {
+  const currentWeekNumber = weekIndex < 6 ? weekIndex + 1 : weekIndex;
   return (
     <div className="timeline-left-section">
       <div className="timeline-left-section-content">
@@ -95,9 +98,14 @@ const TimelineLeftSection = ({ weekIndex }: TimelineLeftSectionProps): JSX.Eleme
           className="timeline-left-section-background-line"
         />
         <div className="timeline-left-section-circles">
-          {TIMELINE.weeks.map((_, index) => (
-            <TimelineBaseCircle key={index} thisWeekIndex={weekIndex} circleIndex={index} />
-          ))}
+          {TIMELINE.weeks.map((_, index) => {
+            if (index == 6) {
+              // skip recess week
+              return null;
+            }
+            const circleIndex = index < 6 ? index : index - 1;
+            return <TimelineBaseCircle key={index} currentWeekNumber={currentWeekNumber} circleIndex={circleIndex} />;
+          })}
         </div>
       </div>
     </div>
