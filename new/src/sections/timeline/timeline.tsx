@@ -1,4 +1,5 @@
 import timelineIcon from "../../assets/icons/timeline.png";
+import TimelineLeftSection from "./timelineLeftSection";
 import TimelineRightSection from "./timelineRightSection";
 import { TIMELINE } from "../../constants/timeline";
 
@@ -12,6 +13,8 @@ const thisWeekIndex = (): number => {
 };
 
 const Timeline = (): JSX.Element => {
+  const weekIndex = thisWeekIndex();
+
   return (
     <div className="timeline">
       <div className="timeline-left">
@@ -29,10 +32,12 @@ const Timeline = (): JSX.Element => {
             </div>
           </div>
         </div>
-        <div>Timeline here!</div>
+        <div>
+          <TimelineLeftSection weekIndex={weekIndex} />
+        </div>
       </div>
       <div className="timeline-right">
-        <TimelineRightSection weekIndex={thisWeekIndex()} />
+        <TimelineRightSection weekIndex={weekIndex} />
       </div>
     </div>
   );
