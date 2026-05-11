@@ -31,8 +31,7 @@ export const portfolioItemsInfo: PortfolioItemsType[] = [
     imgSrc: Thumbnail2025,
     buttonLabel: "GameCraft 2025",
     heading: "Traces",
-    description:
-      "An unsettling hidden object game.",
+    description: "An unsettling hidden object game.",
   },
   {
     link: "https://siderealmaple.itch.io/bluga",
@@ -40,10 +39,9 @@ export const portfolioItemsInfo: PortfolioItemsType[] = [
     imgSrc: Thumbnail2024,
     buttonLabel: "GameCraft 2024",
     heading: "Bluga",
-    description:
-      "A puzzle game about using bombs that cycle between 1,2 and 3 power to reach the end goal.",
+    description: "A puzzle game about using bombs that cycle between 1,2 and 3 power to reach the end goal.",
   },
-  
+
   {
     link: "https://kzfsg.itch.io/sliggy-the-slime",
     videoSrc: Webm2023,

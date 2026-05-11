@@ -47,8 +47,7 @@ export const WORKSHOPS: WorkshopItem[] = [
     title: "[GameStart 2025] Unity Workshop #2 08/26/2025",
     duration: "1h 58m",
     category: "Unity",
-    description:
-      "NUSGDG teaches the basics of the Unity game engine! (Part 2)",
+    description: "NUSGDG teaches the basics of the Unity game engine! (Part 2)",
     link: "https://www.youtube.com/watch?v=bbgkGat_bIg",
     image: unity2,
   },
@@ -56,12 +55,11 @@ export const WORKSHOPS: WorkshopItem[] = [
     title: "[GameStart 2025] Game Design Workshop #2 27/8/2025",
     duration: "2h 3m",
     category: "Game Design",
-    description:
-      "Introduction to Game Design workshop (Part 2)! Learning about Player Agency in games.",
+    description: "Introduction to Game Design workshop (Part 2)! Learning about Player Agency in games.",
     link: "https://www.youtube.com/watch?v=Iho3r74qwKw",
     image: gamedesign2,
   },
-  
+
   {
     title: "[GameStart 2025] Unity Workshop #1 8/22/2025",
     duration: "1h 43m",
