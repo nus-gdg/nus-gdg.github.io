@@ -1,9 +1,13 @@
+import Thumbnail2025 from "../assets/portfolio-thumbnails/traces.png";
+import Thumbnail2024 from "../assets/portfolio-thumbnails/bluga.png";
 import Thumbnail2023 from "../assets/portfolio-thumbnails/sliggy_the_slime.png";
 import Thumbnail2022 from "../assets/portfolio-thumbnails/the_runic_conjecture.png";
 import Thumbnail2021 from "../assets/portfolio-thumbnails/A2wJky66rH_cover.png";
 import Thumbnail2020 from "../assets/portfolio-thumbnails/kitten_mitten_cover.png";
 import Thumbnail2019 from "../assets/portfolio-thumbnails/memory_lanes_cover.png";
 import Thumbnail2018 from "../assets/portfolio-thumbnails/cogworks_cover.png";
+import Webm2025 from "../assets/portfolio-thumbnails/traces.webm";
+import Webm2024 from "../assets/portfolio-thumbnails/bluga.webm";
 import Webm2023 from "../assets/portfolio-thumbnails/sliggy_the_slime.webm";
 import Webm2022 from "../assets/portfolio-thumbnails/the_runic_conjecture.webm";
 import Webm2021 from "../assets/portfolio-thumbnails/A2wJky66rH.webm";
@@ -21,6 +25,23 @@ type PortfolioItemsType = {
 };
 
 export const portfolioItemsInfo: PortfolioItemsType[] = [
+  {
+    link: "https://taromilk.itch.io/traces",
+    videoSrc: Webm2025,
+    imgSrc: Thumbnail2025,
+    buttonLabel: "GameCraft 2025",
+    heading: "Traces",
+    description: "An unsettling hidden object game.",
+  },
+  {
+    link: "https://siderealmaple.itch.io/bluga",
+    videoSrc: Webm2024,
+    imgSrc: Thumbnail2024,
+    buttonLabel: "GameCraft 2024",
+    heading: "Bluga",
+    description: "A puzzle game about using bombs that cycle between 1,2 and 3 power to reach the end goal.",
+  },
+
   {
     link: "https://kzfsg.itch.io/sliggy-the-slime",
     videoSrc: Webm2023,
